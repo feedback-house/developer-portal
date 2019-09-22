@@ -1,32 +1,55 @@
-workflow "Build Docs" {
-  on = "push"
-  resolves = ["Deploy Docs"]
-}
+name: Main workflow
+on: 
+  push:
+    branches:
+      - master
+jobs:
+  run:
+    name: Run
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    
+    - name: Set Node.js 10.x
+      uses: actions/setup-node@master
+      with:
+        version: 10.x
 
-action "Filter Master" {
-  uses = "actions/bin/filter@master"
-  args = "branch master"
-}
+    - name: npm install
+      run: npm install
 
-action "Install" {
-  needs = ["Filter branch"]
-  uses = "actions/npm@master"
-  args = "install --prefix ./website"
-}
+    - name: npm build
+      run: npm build
 
-action "Update version" {
-  needs = ["Install"]
-  uses = "clay/docusaurus-github-action@master"
-  args = "version"
-}
+# workflow "Build Docs" {
+#   on = "push"
+#   resolves = ["Deploy Docs"]
+# }
 
-action "Deploy Docs" {
-  needs = ["Update version"]
-  uses = "clay/docusaurus-github-action@master"
-  args="deploy"
-  secrets = ["DEPLOY_SSH_KEY"]
-  env={
-      BUILD_DIR = "website",
-      PROJECT_NAME = "site"
-  }
-}
+# action "Filter Master" {
+#   uses = "actions/bin/filter@master"
+#   args = "branch master"
+# }
+
+# action "Install" {
+#   needs = ["Filter branch"]
+#   uses = "actions/npm@master"
+#   args = "install --prefix ./website"
+# }
+
+# action "Update version" {
+#   needs = ["Install"]
+#   uses = "clay/docusaurus-github-action@master"
+#   args = "version"
+# }
+
+# action "Deploy Docs" {
+#   needs = ["Update version"]
+#   uses = "clay/docusaurus-github-action@master"
+#   args="deploy"
+#   secrets = ["DEPLOY_SSH_KEY"]
+#   env={
+#       BUILD_DIR = "website",
+#       PROJECT_NAME = "site"
+#   }
+# }
