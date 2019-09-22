@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://developers.feedback.house/blog</id>
-    <title>Feedback House | Developers Blog</title>
+    <title>Feedback House for Developers Blog</title>
     <updated>2017-10-24T06:00:00Z</updated>
     <generator>Feed for Node.js</generator>
     <link rel="alternate" href="https://developers.feedback.house/blog"/>
-    <subtitle>The best place to stay up-to-date with the latest Feedback House | Developers news and events.</subtitle>
+    <subtitle>The best place to stay up-to-date with the latest Feedback House for Developers news and events.</subtitle>
     <logo>https://developers.feedback.house/img/favicon.ico</logo>
     <rights>Copyright © 2019 Feedback House / Entria</rights>
     <entry>
@@ -42,34 +42,8 @@
 <p>This should be truncated.</p>
 ]]></summary>
         <author>
-            <name>Eric Nakagawa</name>
-            <uri>http://twitter.com/ericnakagawa</uri>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[New Blog Post]]></title>
-        <id>https://developers.feedback.house/blog/2017/04/10/blog-post-two.html</id>
-        <link href="https://developers.feedback.house/blog/2017/04/10/blog-post-two.html">
-        </link>
-        <updated>2017-04-10T06:00:00Z</updated>
-        <summary type="html"><![CDATA[<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus elementum massa eget nulla aliquet sagittis. Proin odio tortor, vulputate ut odio in, ultrices ultricies augue. Cras ornare ultrices lorem malesuada iaculis. Etiam sit amet libero tempor, pulvinar mauris sed, sollicitudin sapien.</p>
-]]></summary>
-        <author>
-            <name>Blog Author</name>
-            <uri>http://twitter.com/</uri>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Blog Title]]></title>
-        <id>https://developers.feedback.house/blog/2016/03/11/blog-post.html</id>
-        <link href="https://developers.feedback.house/blog/2016/03/11/blog-post.html">
-        </link>
-        <updated>2016-03-11T06:00:00Z</updated>
-        <summary type="html"><![CDATA[<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus elementum massa eget nulla aliquet sagittis. Proin odio tortor, vulputate ut odio in, ultrices ultricies augue. Cras ornare ultrices lorem malesuada iaculis. Etiam sit amet libero tempor, pulvinar mauris sed, sollicitudin sapien.</p>
-]]></summary>
-        <author>
-            <name>Blog Author</name>
-            <uri>http://twitter.com/</uri>
+            <name>Rafael Turk</name>
+            <uri>https://twitter.com/rafaturk</uri>
         </author>
     </entry>
 </feed>
