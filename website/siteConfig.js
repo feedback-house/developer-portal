@@ -21,7 +21,7 @@ const users = [
 ];
 
 const siteConfig = {
-  title: 'Feedback House | Developers', // Title for your website.
+  title: 'Feedback House for Developers', // Title for your website.
   tagline: 'One stop shop for teams',
   url: 'https://developers.feedback.house', // Your website URL
   baseUrl: '/', // Base URL for your project */
@@ -54,8 +54,8 @@ const siteConfig = {
 
   /* Colors for website */
   colors: {
-    primaryColor: '#61670d',
-    secondaryColor: '#434809',
+    primaryColor: '#309dd1',
+    secondaryColor: '#ffffff',
   },
 
   /* Custom fonts for website */
