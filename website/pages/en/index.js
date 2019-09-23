@@ -66,6 +66,7 @@ class HomeSplash extends React.Component {
           <PromoSection>
             {/*<Button href="#try">Try It Out</Button>*/}
             <Button href={docUrl('getting-started.html')}>Getting Started</Button>
+            <Button href={docUrl('doc2.html')}>Single Sign On</Button>
             <Button href={docUrl('doc2.html')}>API Documentation</Button>
           </PromoSection>
         </div>
@@ -106,12 +107,11 @@ class Index extends React.Component {
         {[
           {
             content:
-              'To make your landing page more attractive, use illustrations! Check out ' +
-              '[**unDraw**](https://undraw.co/) which provides you with customizable illustrations which are free to use. ' +
+              'APIs allow fully automated integrations [**API Getting Started**](https://developers.feedback.house/) which provides you with customizable illustrations which are free to use. ' +
               'The illustrations you see on this page are from unDraw.',
             image: `${baseUrl}img/undraw_code_review.svg`,
             imageAlign: 'left',
-            title: 'Wonderful SVG Illustrations',
+            title: 'API Integration',
           },
         ]}
       </Block>
@@ -121,10 +121,10 @@ class Index extends React.Component {
       <Block background="dark">
         {[
           {
-            content: 'This is another description of how this project is useful',
+            content: 'Create and integrate your own modules and features into Feedback House platform. Access milions of users and benefit from a fully engajement ecossystem.',
             image: `${baseUrl}img/undraw_note_list.svg`,
             imageAlign: 'right',
-            title: 'Creating new App Modules',
+            title: 'Comming soon! Creating Modules',
           },
         ]}
       </Block>
@@ -134,11 +134,10 @@ class Index extends React.Component {
       <Block background="light">
         {[
           {
-            content:
-              'Each new Docusaurus project has **randomly-generated** theme colors.',
+            content: `Single Sign On is a important security and user experience feature that automaticaly authenticate your users using credentials from your company. Feedback House supports multiple login strategies, that can be even used simultaneously. Check the [**Single Sign On**](${baseUrl}img/undraw_operating_system.svg) documentation.`,
             image: `${baseUrl}img/undraw_youtube_tutorial.svg`,
             imageAlign: 'right',
-            title: 'Randomly Generated Theme Colors',
+            title: 'Single Sign On',
           },
         ]}
       </Block>

@@ -1,29 +1,53 @@
 ---
 id: getting-started
-title: Platform Setup
+title: Setup the Feedback House Platform
 sidebar_label: Getting Started
 ---
 
-## About Feedback House
+Feedback House platform is designed to facilitate developer experiency while ensuring higthest level of security. This document helps Developers or system administrators to properly setup the platform.
 
-Feedback House is a SaaS platform that provides multiple features for teams and managers. Multiple modules can be used simutanusly proving great value for teams, managers and HR personal.
+*Using authomated methods such as Single-Sign-On and APIs are prefered since they provide better user experience, increase security and automate processes.*
 
-## Getting started with the Feedback House Platform
+## Getting started
 
-Using the Feedback House platform is simple. Once logged for the first time in the platform you'll be able to invite more users to the platform, setup more convient login methods such as single-sign-on, or import users using Excel files or APIs. Authomated methods such as Single-Sign-On and APIs are highly prefered over manually creating users.
+In order to use APIs or automated login you need to have `ADMIN` privileges.
 
-## Single Sign-On
+Once logged for the first time in the platform you'll be able to invite more users to the platform, setup login methods such as single-sign-on, APIs or even import users using Excel files. 
+
+## Setting up Single Sign-On (SSO)
+
+Feedback House supports multiple SSO identy providers (IdP). An Identity Provider is a server that can provide identity information about users of your company. For example, Google can be an Identity Provider for companies using the G Suite solution. If your company is using G Suite you can log automaticaly into Feedback House using your Google account. then a Google server will send your identity information to that site.
 
 ### Azure Single Sign On
 
-Nulla facilisi. Maecenas sodales nec purus eget posuere. Sed sapien quam, pretium a risus in, porttitor dapibus erat. Sed sit amet fringilla ipsum, eget iaculis augue. Integer sollicitudin tortor quis ultricies aliquam. Suspendisse fringilla nunc in tellus cursus, at placerat tellus scelerisque. Sed tempus elit a sollicitudin rhoncus. Nulla facilisi. Morbi nec dolor dolor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras et aliquet lectus. Pellentesque sit amet eros nisi. Quisque ac sapien in sapien congue accumsan. Nullam in posuere ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin lacinia leo a nibh fringilla pharetra.
+If your company uses Azure Single Sign On you'll be able to automatically loggin into Feedback House using Azure as IdP. In order to use this login strategy you need to active this option in the settings menu.
 
 ### Google Single Sign On
 
+If your company uses G Suite you'll be able to automatically log into Feedback House using Google as IdP.
+
+### SAML Single Sign on
+
+If your company uses SAML be able to automatically log into Feedback House SAML Servers as IdP.
+
 ## Security & Firewall
 
-Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin venenatis lectus dui, vel ultrices ante bibendum hendrerit. Aenean egestas feugiat dui id hendrerit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur in tellus laoreet, eleifend nunc id, viverra leo. Proin vulputate non dolor vel vulputate. Curabitur pretium lobortis felis, sit amet finibus lorem suscipit ut. Sed non mollis risus. Duis sagittis, mi in euismod tincidunt, nunc mauris vestibulum urna, at euismod est elit quis erat. Phasellus accumsan vitae neque eu placerat. In elementum arcu nec tellus imperdiet, eget maximus nulla sodales. Curabitur eu sapien eget nisl sodales fermentum.
+### Whitelisting Feedback House Domains
 
-## Phasellus
+In order to properly operate your company users need to be able to access Feedback House servers. Feedback House uses standard web technologies and enforces encription in all communications, in most cases your setup should work out of the box with not additional requirements. 
 
-Phasellus pulvinar ex id commodo imperdiet. Praesent odio nibh, sollicitudin sit amet faucibus id, placerat at metus. Donec vitae eros vitae tortor hendrerit finibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque vitae purus dolor. Duis suscipit ac nulla et finibus. Phasellus ac sem sed dui dictum gravida. Phasellus eleifend vestibulum facilisis. Integer pharetra nec enim vitae mattis. Duis auctor, lectus quis condimentum bibendum, nunc dolor aliquam massa, id bibendum orci velit quis magna. Ut volutpat nulla nunc, sed interdum magna condimentum non. Sed urna metus, scelerisque vitae consectetur a, feugiat quis magna. Donec dignissim ornare nisl, eget tempor risus malesuada quis.
+If you encounter issues using the platform please check the folling requirementes.
+
+- Ensure you have white list Feedback House domains in your proxy server, or internal firewall. Your users should be ablle to access all domains and subdomains.
+  
+  > You have to white list all feedback house domains *.feedback.house
+  
+  > You have to white list all feedback house domains *.feedback.house
+
+- Ensure you are not blocking emails from feedback house domain.
+  
+  > You have to white list all feedback house domains *.feedback.house in your email provider
+  
+- Dont cache
+
+    > Do not change or enforce new cache policies for Feedback House static content or IP address. Feedback house uses a global CDN network and additional server protections so IPs change often and without notice.
