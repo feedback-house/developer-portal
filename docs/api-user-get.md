@@ -84,7 +84,7 @@ Needs to be a valid `GroupID`
 
 This fileld defines the Business Division of user. This needs to be a valid Business Division ID.
 
-#### `manager` [ManagerId]
+#### `manager` [UserId]
 
 This fileld defines the user manager.
 
