@@ -107,7 +107,7 @@ class Index extends React.Component {
         {[
           {
             content:
-              'Developers can leverage multiple APIs to automate the user life cicle.</br>' +
+              'Developers can leverage multiple APIs to automate the user life cycle.</br>' +
               '</br>Check API Documentation [**API Getting Started**](/docs/api-getting-started)', 
             image: `${baseUrl}img/undraw_code_review.svg`,
             imageAlign: 'left',
@@ -123,10 +123,10 @@ class Index extends React.Component {
           {
             content: 
               'Create and integrate your own modules into the Feedback House platform.</br>' +
-              '</br>Access milions of users and benefit from a fully engajement ecossystem.',
+              '</br>Access millions of users and benefit from a fully engagement ecosystem.',
             image: `${baseUrl}img/undraw_note_list.svg`,
             imageAlign: 'right',
-            title: 'Comming soon! Create your Own Modules',
+            title: 'Coming soon! Create your Own Modules',
           },
         ]}
       </Block>
@@ -137,7 +137,7 @@ class Index extends React.Component {
         {[
           {
             content: 
-              `Single Sign On is a important security and user experience feature that automaticaly authenticate your users using credentials from your company.</br>` +
+              `Single Sign On is an important security and user experience feature that automatically authenticate your users using credentials from your company.</br>` +
               `</br>Feedback House supports multiple login strategies, that can be even used simultaneously.</br>` +
               `</br>Check the [**Single Sign On**](/docs/single-sign-on-getting-started.html) documentation.`,
             image: `${baseUrl}img/undraw_youtube_tutorial.svg`,

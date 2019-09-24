@@ -5,6 +5,6 @@
   },
   "docs-api": {
     "API Overview": ["api-getting-started", "api-list"],
-    "Users API": ["api-user-update-or-create", "doc5"]
+    "Users API": ["api-user-update-or-create", "api-user-get"]
   }
 }
