@@ -107,7 +107,8 @@ class Index extends React.Component {
         {[
           {
             content:
-              'Developers can leverage APIs to fully automate user life cicle. Check API Documentation [**API Getting Started**](/docs/api-getting-started)', 
+              'Developers can leverage multiple APIs to automate the user life cicle.</br>' +
+              '</br>Check API Documentation [**API Getting Started**](/docs/api-getting-started)', 
             image: `${baseUrl}img/undraw_code_review.svg`,
             imageAlign: 'left',
             title: 'API Integration',
@@ -120,10 +121,12 @@ class Index extends React.Component {
       <Block background="dark">
         {[
           {
-            content: 'Create and integrate your own modules and features into Feedback House platform. Access milions of users and benefit from a fully engajement ecossystem.',
+            content: 
+              'Create and integrate your own modules into the Feedback House platform.</br>' +
+              '</br>Access milions of users and benefit from a fully engajement ecossystem.',
             image: `${baseUrl}img/undraw_note_list.svg`,
             imageAlign: 'right',
-            title: 'Comming soon! Create Modules',
+            title: 'Comming soon! Create your Own Modules',
           },
         ]}
       </Block>
@@ -133,7 +136,10 @@ class Index extends React.Component {
       <Block background="light">
         {[
           {
-            content: `Single Sign On is a important security and user experience feature that automaticaly authenticate your users using credentials from your company. Feedback House supports multiple login strategies, that can be even used simultaneously. Check the [**Single Sign On**](/docs/single-sign-on-getting-started.html) documentation.`,
+            content: 
+              `Single Sign On is a important security and user experience feature that automaticaly authenticate your users using credentials from your company.</br>` +
+              `</br>Feedback House supports multiple login strategies, that can be even used simultaneously.</br>` +
+              `</br>Check the [**Single Sign On**](/docs/single-sign-on-getting-started.html) documentation.`,
             image: `${baseUrl}img/undraw_youtube_tutorial.svg`,
             imageAlign: 'right',
             title: 'Single Sign On',

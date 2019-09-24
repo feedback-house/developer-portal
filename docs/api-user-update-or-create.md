@@ -85,16 +85,72 @@ Notes:
 
 The only required fields are `name` and one of the primary key fields; We strongly recommend that you use additional keys to control how users are created, otherwise this can lead to duplicated users.
 
-- `name` - The user fullname. This field is required. 
-- `emails` - Emails associated with this user. Users can have multiple emails. This field expects an array in the format `emails: ["email1@yourcompany.com","email2@yourcompany.com"]`. This field will also be used as primary key to detect if users will be created or updated.
-- `gender` - Gender of the user. Valid options are `MALE`, `FEMALE`, `OTHER`. This field is not required, if not provided it will be defined to a internal `undefined` valid.
-- `title` - The user job post title. This a string.
-- `active` - This fileld defines if the user is active or not. Valid options are `true`, `false`. This field is not required, if not provided it will be set to `active`.
-- `groups` - Groups that this user bellongs to. This field expects an array in the format `groups: ["507f1f77bcf86cd799439011","507f1f77bcf86cd799439011"]`. Needs to be a valid `GroupID`
-- `businessDivision` - This fileld defines the Business Division of user. This needs to be a valid Business Division ID.
-- `manager` - This fileld defines the user manager. This field needs to be one of the following: A valid Manager ID, or valid Manager TaxID, or valid manager EmployeeID (your own internal employeeID). For each request the API will attempt to find the manager using the provided key. 
-- `phoneNumbers` - This fileld defines phones for this user. This field expects an array of strings in the format `phoneNumbers: ["+55 11 976231232", "11 9999999999", "999999999"]`. Phone number logic is not strictly enforced.
-- `birthDate` - This field defines de user birth date, format is `YYYY/MM/DD`.
-- `admissionDate` - This field defines de user admission date, format is `YYYY/MM/DD`.
-- `demissionDate` - This field defines date when the user left the company. Note: if this field is defined the user will be automatically set to `active:false`, regarless of the value provied in the active field.
-- `area` - This field defines the Area that this user belongs. This fields expects a valid `AreaID`
+
+#### `name` [String] 
+The user fullname. This field is required. 
+
+#### `emails` [[String]]
+
+Emails associated with this user. Users can have multiple emails. This field expects an array in the format `emails: ["email1@yourcompany.com","email2@yourcompany.com"]`. 
+
+> This field will also be used as **primary key** to detect if users will be created or updated.
+
+#### `title` [String]
+The user job post title. 
+
+#### `active` [{`true`,`false`}]
+
+This fileld defines if the user is active or not. Valid options are `true`, `false`. This field is not required, if not provided it will be set to `active`.
+
+#### `groups` [[GroupId]]
+
+Groups that this user bellongs to. 
+This field expects an array in the format `groups: ["507f1f77bcf86cd799439011","507f1f77bcf86cd799439011"]`. Needs to be a valid `GroupID`
+
+#### `businessDivision` [BusinessDivisionID]
+
+This fileld defines the Business Division of user. This needs to be a valid Business Division ID.
+
+#### `manager` [ManagerId]
+
+This fileld defines the user manager.
+
+For each request the API will attempt to find the manager using the provided key. 
+
+#### `phoneNumbers` [[String]]
+
+This fileld defines phones number for this user.
+
+This field expects an array of strings in the format `phoneNumbers: ["+55 11 976231232", "11 9999999999", "999999999"]`. 
+
+Note: Phone number logic is not strictly enforced. This API will try, in a best effort basis, format numbers to appropriate values.
+
+#### `birthDate`
+
+This field defines de user birth date, format is `YYYY/MM/DD`.
+
+#### `admissionDate` 
+
+This field defines de user admission date, format is `YYYY/MM/DD`.
+
+#### `demissionDate` 
+
+This field defines date when the user left the company. 
+
+> Note: If this field is defined the user will be automatically set to `active:false`, regarless of the value provied in the active field.
+
+#### `area` [AreaId]
+
+This field defines the Area that this user belongs. This fields expects a valid `AreaID`
+
+#### `gender` [{`MALE`,`FEMALE`,`OTHER`}]
+
+Gender of the user. Valid options are `MALE`, `FEMALE`, `OTHER`. 
+
+This field is not required, however when not provided it will be defined to a internal `undefined` valid.
+
+#### `tags` [[String]]
+
+Arbitrary tags associated with this user. 
+
+Tags can also be expressed in key value format, when using `:`. Tags that uses the format of `key:value`, enhancing reports and statics. Example: `projet:secret`, `status:new`, `erpuser:yes`
