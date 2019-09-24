@@ -3,7 +3,7 @@
     "Getting Started": ["getting-started"]
   },
   "docs-api": {
-    "First Category": ["doc4", "doc3"],
-    "Users API": ["api-user-create", "doc5"]
+    "API Overview": ["api-getting-started", "api-list"],
+    "Users API": ["api-user-update-or-create", "doc5"]
   }
 }

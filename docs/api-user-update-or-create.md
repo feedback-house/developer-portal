@@ -1,6 +1,6 @@
 ---
-id: api-user-create
-title: User API | Create or Update
+id: api-user-update-or-create
+title: User API | Update or Create
 ---
 
 ## API Summary
@@ -39,9 +39,34 @@ users: [ { "name": "User 1", "emails": ["user1@yourcompany.com"], ... },]
 ```
 
 
-### Error reporting
+### Response and Error reporting
 
 For each request the API will evaluate each user individually and will report errors per user. This means that this API can sucesslfully create or update some users while rejecting others.
+
+Response example for a request without errors:
+```json
+{
+    "status": "OK",
+    "message": "Created 10 | Updated 105 | Errors 0",
+    "errors": []
+}
+```
+
+Response example for a request **with errors**. In the example bellow the `user` field was incorrectly set as `username`, since this field is required the API returned a error for this user.
+```json
+{
+    "status": "OK",
+    "message": "Created 3 | Updated 2 | Errors 1",
+    "errors": [
+        {
+        "object": {
+            "username": "User Name",
+            ...
+        },
+        "message": "Missing name field"
+    }
+}
+```
 
 ## Idempotency Primary Keys
 
@@ -63,11 +88,20 @@ Notes:
 The only required field is `title`; however, we provide options to add author information to your blog post as well along with other options.
 
 - `name` - The user fullname. This field is required. 
-- `emails` - The associated emails of this user. Users can have multiple emails. This field expects an array in the format `emails: ['email1@yourcompany.com','email2@yourcompany.com']`. This field will also be used as primary key to detect if users will be created or updated.
-- `gender` - Gender of the user. 
+- `emails` - Emaisl associated with this user. Users can have multiple emails. This field expects an array in the format `emails: ['email1@yourcompany.com','email2@yourcompany.com']`. This field will also be used as primary key to detect if users will be created or updated.
+- `gender` - Gender of the user. Valid options are `MALE`, `FEMALE`, `OTHER`.
 - `groups` - Groups that this user bellongs to. Needs to be a valid `GroupID`
 - `title` - The user job post title. This a string.
-- `active` - Defines if the user is active or not.
+- `active` - This fileld defines if the user is active or not. Valid options are `true`, `false`.
+- `active` - This fileld defines if the user is active or not. Valid options are `true`, `false`.
+- `businessDivision` - This fileld defines the Business Division of user. This needs to be a valid Business Division ID.
+- `manager` - This fileld defines if the user manager. This field needs to be one of the following: A valid Manager ID, or valid Manager TaxID, or valid manager EmployeeID (your own internal employeeID). For each request the API will attempt to find the manager using the provided key. 
+- `phoneNumbers` - This fileld defines phones for this user. This field expects an array of strings in the format `phoneNumbers: ['+55 11 976231232', '11 9999999999']`. Phone logic is not strictly enforced.
+- `birthDate` - This field defines de user birth date, format is `YYYY/MM/DD`.
+- `admissionDate` - This field defines de user admission date, format is `YYYY/MM/DD`.
+- `demissionDate` - This field defines date when the user left the company. Note: if this field is defined the user will be automatically set to `active:false`, regarless of the value provied in the active field.
+- `costRevenueCenter` - This field defines Area whereas is a revenue or cost center. This fields expects a valid `Cost RevenueCenter ID
 
-This is a link to [another document.](doc3.md)  
+
+This is a link to   
 This is a link to an [external page.](http://www.example.com)

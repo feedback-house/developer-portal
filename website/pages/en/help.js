@@ -30,10 +30,6 @@ function Help(props) {
       content: 'Ask questions directly to our support team using internal support chat tool (needs to be logged)',
       title: 'Support Chat',
     },
-    {
-      content: "Find out what's new with this project",
-      title: 'Stay up to date',
-    },
   ];
 
   return (
@@ -44,7 +40,7 @@ function Help(props) {
             <h1>Need help?</h1>
           </header>
           <p>This project is maintained by a dedicated support team. We're here to help!</p>
-          <GridBlock contents={supportLinks} layout="threeColumn" />
+          <GridBlock contents={supportLinks} _layout="threeColumn" />
         </div>
       </Container>
     </div>

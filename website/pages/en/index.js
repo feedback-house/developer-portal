@@ -107,8 +107,7 @@ class Index extends React.Component {
         {[
           {
             content:
-              'APIs allow fully automated integrations [**API Getting Started**](https://developers.feedback.house/) which provides you with customizable illustrations which are free to use. ' +
-              'The illustrations you see on this page are from unDraw.',
+              'Developers can leverage APIs to fully automate user life cilscle. Check API Documentation [**API Getting Started**](https://developers.feedback.house/)', 
             image: `${baseUrl}img/undraw_code_review.svg`,
             imageAlign: 'left',
             title: 'API Integration',
