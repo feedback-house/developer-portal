@@ -27,10 +27,10 @@ class Footer extends React.Component {
         <section className="sitemap">
           <div>
             <h5>Docs</h5>
-            <a href={this.docUrl('doc1.html', this.props.language)}>
+            <a href={this.docUrl('getting-started', this.props.language)}>
               Getting Started 
             </a>
-            <a href={this.docUrl('api-list.html', this.props.language)}>
+            <a href={this.docUrl('api-getting-started', this.props.language)}>
               API Reference
             </a>
           </div>
@@ -41,14 +41,9 @@ class Footer extends React.Component {
               User Showcase
             </a>
             */}
-            {/*
-            <a
-              href="https://stackoverflow.com/questions/tagged/"
-              target="_blank"
-              rel="noreferrer noopener">
-              Stack Overflow
+            <a href="https://feedback.house">
+              Feedback House
             </a>
-            */}
             <a
               href="https://twitter.com/feedback_house"
               target="_blank"
@@ -66,7 +61,7 @@ class Footer extends React.Component {
               className="github-button"
               href={this.props.config.repoUrl}
               data-icon="octicon-star"
-              data-count-href="/facebook/docusaurus/stargazers"
+              data-count-href="feedback-house/developer-portal/stargazers"
               data-show-count="true"
               data-count-aria-label="# stargazers on GitHub"
               aria-label="Star this project on GitHub">

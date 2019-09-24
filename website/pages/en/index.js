@@ -66,8 +66,8 @@ class HomeSplash extends React.Component {
           <PromoSection>
             {/*<Button href="#try">Try It Out</Button>*/}
             <Button href={docUrl('getting-started.html')}>Getting Started</Button>
-            <Button href={docUrl('doc2.html')}>Single Sign On</Button>
-            <Button href={docUrl('doc2.html')}>API Documentation</Button>
+            <Button href={docUrl('single-sign-on-getting-started.html')}>Single Sign On</Button>
+            <Button href={docUrl('api-getting-started.html')}>API Documentation</Button>
           </PromoSection>
         </div>
       </SplashContainer>
@@ -107,7 +107,7 @@ class Index extends React.Component {
         {[
           {
             content:
-              'Developers can leverage APIs to fully automate user life cilscle. Check API Documentation [**API Getting Started**](https://developers.feedback.house/)', 
+              'Developers can leverage APIs to fully automate user life cicle. Check API Documentation [**API Getting Started**](/docs/api-getting-started)', 
             image: `${baseUrl}img/undraw_code_review.svg`,
             imageAlign: 'left',
             title: 'API Integration',
@@ -123,17 +123,17 @@ class Index extends React.Component {
             content: 'Create and integrate your own modules and features into Feedback House platform. Access milions of users and benefit from a fully engajement ecossystem.',
             image: `${baseUrl}img/undraw_note_list.svg`,
             imageAlign: 'right',
-            title: 'Comming soon! Creating Modules',
+            title: 'Comming soon! Create Modules',
           },
         ]}
       </Block>
     );
 
-    const LearnHow = () => (
+    const SingleSignOn = () => (
       <Block background="light">
         {[
           {
-            content: `Single Sign On is a important security and user experience feature that automaticaly authenticate your users using credentials from your company. Feedback House supports multiple login strategies, that can be even used simultaneously. Check the [**Single Sign On**](${baseUrl}img/undraw_operating_system.svg) documentation.`,
+            content: `Single Sign On is a important security and user experience feature that automaticaly authenticate your users using credentials from your company. Feedback House supports multiple login strategies, that can be even used simultaneously. Check the [**Single Sign On**](/docs/single-sign-on-getting-started.html) documentation.`,
             image: `${baseUrl}img/undraw_youtube_tutorial.svg`,
             imageAlign: 'right',
             title: 'Single Sign On',
@@ -196,7 +196,7 @@ class Index extends React.Component {
         <div className="mainContainer">
 {/*          <Features /> 
           <FeatureCallout /> */}
-          <LearnHow />
+          <SingleSignOn />
           <TryOut />
           <Description />
 {/*          <Showcase /> */}

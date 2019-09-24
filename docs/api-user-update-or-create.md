@@ -5,23 +5,21 @@ title: User API | Update or Create
 
 ## API Summary
 
-Endpoint: **https://api.feedback.house/api/user/v1/update-or-create**
-
-Method: **POST**
-
-Format: **JSON**
-
-Idempotent: **YES**, using primary keys
+| Endpoint | **https://api.feedback.house/api/user/v1/update-or-create** |
+|----------|-------------------------------------------------------------|
+| Method   | **POST** |
+| Format   | **JSON** |
+| Idempotent | **YES**, using primary keys |
 
 ## API details
 
-This endpoint supports creating or updating users. This API was intentionaly designed with idea that it will first try find and update users and only whe no existing user is found a new one will be created. This design allows this API to be regurlaly be called by your company. With this API you have a single endpoint that can handle multiple scenarios such as: User addmision, change user's manager, change user's area, or even disabling users when they leave your company.
+This endpoint supports creating or updating users. This API was intentionaly designed with idea that it will first try find and update users and only when no existing user is found a new one will be created. This design allows this API to be regurlaly be called by your company. With this API you have a single endpoint that can handle multiple scenarios such as: User addmision, change user's manager, change user's area, or even disabling users when they leave your company.
 
 When calling this API must design your code to pass the latest, most updated user information. If an existing user is found, *using the primary keys*, the user will be updated. Only when no existing user is found the API will create a new user.
 
 ### Batch Operations
 
-This edpoint supports `batch` operations and as such expects **an array of users** (*in the format of an array of objects*) containing each users details:
+This edpoint supports `batch` operations and as such expects **an array of users** (*in the format of an array of objects*). Each object must contain the user details:
 
 ```json
 users: [
@@ -80,28 +78,23 @@ Primary key fields:
 - `employeeId` - The user employeeId in the context of your company. You can use any key here as long you can controll it.
 
 Notes:
-- Primary keys are not required, however when no primary keys are defined in the payload a new user will be created upon each request.
+- Primary keys are not required, however when no primary keys are defined a new user will be created upon each request.
 - Calling a API with the same payload a second time (ie. same keys) will not create a new user, it will update the previsuly created user.
 
-## Available Fields per user
+## Available Fields per User
 
-The only required field is `title`; however, we provide options to add author information to your blog post as well along with other options.
+The only required fields are `name` and one of the primary key fields; We strongly recommend that you use additional keys to control how users are created, otherwise this can lead to duplicated users.
 
 - `name` - The user fullname. This field is required. 
-- `emails` - Emaisl associated with this user. Users can have multiple emails. This field expects an array in the format `emails: ['email1@yourcompany.com','email2@yourcompany.com']`. This field will also be used as primary key to detect if users will be created or updated.
-- `gender` - Gender of the user. Valid options are `MALE`, `FEMALE`, `OTHER`.
-- `groups` - Groups that this user bellongs to. Needs to be a valid `GroupID`
+- `emails` - Emails associated with this user. Users can have multiple emails. This field expects an array in the format `emails: ["email1@yourcompany.com","email2@yourcompany.com"]`. This field will also be used as primary key to detect if users will be created or updated.
+- `gender` - Gender of the user. Valid options are `MALE`, `FEMALE`, `OTHER`. This field is not required, if not provided it will be defined to a internal `undefined` valid.
 - `title` - The user job post title. This a string.
-- `active` - This fileld defines if the user is active or not. Valid options are `true`, `false`.
-- `active` - This fileld defines if the user is active or not. Valid options are `true`, `false`.
+- `active` - This fileld defines if the user is active or not. Valid options are `true`, `false`. This field is not required, if not provided it will be set to `active`.
+- `groups` - Groups that this user bellongs to. This field expects an array in the format `groups: ["507f1f77bcf86cd799439011","507f1f77bcf86cd799439011"]`. Needs to be a valid `GroupID`
 - `businessDivision` - This fileld defines the Business Division of user. This needs to be a valid Business Division ID.
-- `manager` - This fileld defines if the user manager. This field needs to be one of the following: A valid Manager ID, or valid Manager TaxID, or valid manager EmployeeID (your own internal employeeID). For each request the API will attempt to find the manager using the provided key. 
-- `phoneNumbers` - This fileld defines phones for this user. This field expects an array of strings in the format `phoneNumbers: ['+55 11 976231232', '11 9999999999']`. Phone logic is not strictly enforced.
+- `manager` - This fileld defines the user manager. This field needs to be one of the following: A valid Manager ID, or valid Manager TaxID, or valid manager EmployeeID (your own internal employeeID). For each request the API will attempt to find the manager using the provided key. 
+- `phoneNumbers` - This fileld defines phones for this user. This field expects an array of strings in the format `phoneNumbers: ["+55 11 976231232", "11 9999999999", "999999999"]`. Phone number logic is not strictly enforced.
 - `birthDate` - This field defines de user birth date, format is `YYYY/MM/DD`.
 - `admissionDate` - This field defines de user admission date, format is `YYYY/MM/DD`.
 - `demissionDate` - This field defines date when the user left the company. Note: if this field is defined the user will be automatically set to `active:false`, regarless of the value provied in the active field.
-- `costRevenueCenter` - This field defines Area whereas is a revenue or cost center. This fields expects a valid `Cost RevenueCenter ID
-
-
-This is a link to   
-This is a link to an [external page.](http://www.example.com)
+- `area` - This field defines the Area that this user belongs. This fields expects a valid `AreaID`

@@ -1,6 +1,7 @@
 {
   "docs": {
-    "Getting Started": ["getting-started"]
+    "Getting Started": ["getting-started"],
+    "Single Sign On": ["single-sign-on-getting-started"]
   },
   "docs-api": {
     "API Overview": ["api-getting-started", "api-list"],

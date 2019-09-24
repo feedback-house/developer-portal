@@ -10,8 +10,6 @@ Feedback House platform is designed to facilitate developer experiency while ens
 
 ## Getting started
 
-In order to use APIs or automated login you need to have `ADMIN` privileges.
-
 Once logged for the first time in the platform you'll be able to invite more users to the platform, setup login methods such as single-sign-on, APIs or even import users using Excel files. 
 
 ## Setting up Single Sign-On (SSO)
