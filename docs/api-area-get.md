@@ -1,6 +1,6 @@
 ---
 id: api-area-get
-title: Area API | Get Data
+title: Area API | GET Data
 ---
 
 ## API Summary
@@ -12,13 +12,13 @@ title: Area API | Get Data
 
 ## API details
 
-This endpoint allows quering and retriving `Area` data. This API will return the most recent and updated `area` as possible.
+This endpoint allows querying and retrieving `Area` data. This API will return the most recent and updated `Area` as possible.
 
-Given the size of your company you may need to paginate this API in other to retrive all resources.
+Given the size of your company you may need to paginate this API in other to retrieve all resources.
 
 ### Response 
 
-This API will return multiple `areas` in **an array of areas** (*in the format of an array of objects*). 
+This API will return multiple areas in an array of `Area` (*in the format of an array of objects*). 
 
 ```json
 areas: [
@@ -59,7 +59,7 @@ areas: []
 
 ### Error reporting
 
-For each request the API will evaluate each area individually and will report errors per area. This means that this API can sucesslfully create or update some areas while rejecting others.
+For each request the API will evaluate each area individually and will report errors per area. 
 
 Example for a response with errors:
 ```json
@@ -69,7 +69,7 @@ Example for a response with errors:
 }
 ```
 
-## Reponse Fields for each area
+## Response Fields for each area
 
 The only required fields are `name` and one of the primary key fields; We strongly recommend that you use additional keys to control how areas are created, otherwise this can lead to duplicated areas.
 
@@ -79,23 +79,23 @@ Unique ID for this Area. This field is a *primary key* and should be used whenev
 > This field can and should be used as **primary key** to detect if Area will be created or updated when using the Update or create API [area Update or Create](./api-area-update-or-create)
 
 #### `name` [String] 
-The area fullname. This field is required. 
+The area full name. This field is required. 
 
 #### `responsibles` [[UserId]]
 
-Users that will have extra priviledges for this Area. This field is an array of UserIds `responsibles: ["507f1f77bcf86cd7994","507f1f77bcf86cd1234"]`. 
+Users that will have extra privileges for this Area. This field is an array of UserIds `responsibles: ["507f1f77bcf86cd7994","507f1f77bcf86cd1234"]`. 
 
 #### `active` [{`true`,`false`}]
 
-This fileld defines if the area is active or not. Valid options are `true`, `false`. 
+This field defines if the area is active or not. Valid options are `true`, `false`. 
 
 #### `parent` [AreaId]
 
-Parent Area of this Area. This indicates if this Area is a child of another Area. This setting is optional and is used when setting hierarquies.
+Parent Area of this Area. This indicates if this Area is a child of another Area. This setting is optional and is used when setting hierarchies.
 
 #### `businessDivision` [BusinessDivisionID]
 
-This fileld defines the Business Division of Area. This needs to be a valid Business Division ID.
+This field defines the Business Division of Area. This needs to be a valid Business Division ID.
 
 #### `allowCandidatesApply` [{`true`,`false`}]
 
@@ -105,5 +105,5 @@ If your company have the ATS module enabled this field indicates if this Area is
 
 Arbitrary tags associated with this Area. 
 
-Tags can also be expressed in key value format, when using `:`. Tags that uses the format of `key:value`, enhancing reports and statics. Example: `projet:secret`, `status:new`, `erparea:yes`
+Tags can also be expressed in key value format, when using `:`. Tags that uses the format of `key:value`, enhancing reports and statics. Example: `project:secret`, `status:new`, `valid:yes`
 

@@ -100,7 +100,7 @@ The user job post title.
 
 #### `active` [{`true`,`false`}]
 
-This fileld defines if the user is active or not. Valid options are `true`, `false`. 
+This field defines if the user is active or not. Valid options are `true`, `false`. 
 
 This field is not required, if not provided it will be set to `active`.
 
@@ -113,17 +113,17 @@ Needs to be a valid `GroupID`
 
 #### `businessDivision` [BusinessDivisionID]
 
-This fileld defines the Business Division of user. This needs to be a valid Business Division ID.
+This field defines the Business Division of user. This needs to be a valid Business Division ID.
 
 #### `manager` [ManagerId]
 
-This fileld defines the user manager.
+This field defines the user manager.
 
 For each request the API will attempt to find the manager using the provided key. 
 
 #### `phoneNumbers` [[String]]
 
-This fileld defines phones number for this user.
+This field defines phones number for this user.
 
 This field expects an array of strings in the format `phoneNumbers: ["+55 11 976231232", "11 9999999999", "999999999"]`. 
 

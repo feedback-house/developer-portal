@@ -5,16 +5,16 @@ title: Business Division API | Get Data
 
 ## API Summary
 
-| Endpoint | **https://api.feedback.house/api/planning/v1/business division** |
+| Endpoint | **https://api.feedback.house/api/planning/v1/business-division** |
 |----------|---------------------------------------------------|
 | Method   | **GET** |
 | Format   | **JSON** |
 
 ## API details
 
-This endpoint allows quering and retriving `Business Division` data. This API will return the most recent and updated `business division` as possible.
+This endpoint allows querying and retrieving `Business Division` data. This API will return the most recent and updated `business division` as possible.
 
-Given the size of your company you may need to paginate this API in other to retrive all resources.
+Given the size of your company you may need to paginate this API in other to retrieve all resources.
 
 ### Response 
 
@@ -83,19 +83,19 @@ The business division fullname. This field is required.
 
 #### `responsibles` [[UserId]]
 
-Users that will have extra priviledges for this Business Division. This field is an array of UserIds `responsibles: ["507f1f77bcf86cd7994","507f1f77bcf86cd1234"]`. 
+Users that will have extra privileges for this Business Division. This field is an array of UserIds `responsibles: ["507f1f77bcf86cd7994","507f1f77bcf86cd1234"]`. 
 
 #### `active` [{`true`,`false`}]
 
-This fileld defines if the business division is active or not. Valid options are `true`, `false`. 
+This field defines if the business division is active or not. Valid options are `true`, `false`. 
 
 #### `parent` [Business DivisionId]
 
-Parent Business Division of this Business Division. This indicates if this Business Division is a child of another Business Division. This setting is optional and is used when setting hierarquies.
+Parent Business Division of this Business Division. This indicates if this Business Division is a child of another Business Division. This setting is optional and is used when setting hierarchies.
 
 #### `businessDivision` [BusinessDivisionID]
 
-This fileld defines the Business Division of Business Division. This needs to be a valid Business Division ID.
+This field defines the Business Division of Business Division. This needs to be a valid Business Division ID.
 
 #### `allowCandidatesApply` [{`true`,`false`}]
 
@@ -105,5 +105,5 @@ If your company have the ATS module enabled this field indicates if this Busines
 
 Arbitrary tags associated with this Business Division. 
 
-Tags can also be expressed in key value format, when using `:`. Tags that uses the format of `key:value`, enhancing reports and statics. Example: `projet:secret`, `status:new`, `erpbusiness division:yes`
+Tags can also be expressed in key value format, when using `:`. Tags that uses the format of `key:value`, enhancing reports and statics. Example: `project:secret`, `status:new`, `division:yes`
 

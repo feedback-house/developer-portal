@@ -13,9 +13,13 @@ title: Area API | Update or Create
 
 ## API details
 
-This endpoint supports creating or updating Areas. This API was intentionaly designed with idea that it will first try find and update existing Areas and only when no existing Area is found a new one will be created. 
+This endpoint supports creating or updating `Areas`. 
 
-This design allows this API to be regurlaly be called by your company. With this API you have a single endpoint that can handle multiple scenarios such as: Creating new Area, changing Area details (name for example), or even disabling Area.
+Area is the smallest unit of a group of colleagues working with a single purpose. Traditionally `Areas` have a dedicated manager, however the platform supports areas without a manager.  
+
+This API was intentionally designed with idea that it will first try find and update existing Areas and only when no existing Area is found a new one will be created. 
+
+This design allows this API to be regularly be called by your company. With this API you have a single endpoint that can handle multiple scenarios such as: Create new Area, update Area details (name for example), or even disable Area.
 
 When calling this API must design your code to pass the latest, most updated area information. If an existing Area is found, *using the primary keys*, the area will be updated. Only when no existing Area is found the API will create a new area.
 
@@ -41,7 +45,7 @@ areas: [ { "name": "area 1", "active": true, ... },]
 
 ### Response and Error reporting
 
-For each request the API will evaluate each area individually and will report errors per area. This means that this API can sucesslfully create or update some areas while rejecting others.
+For each request the API will evaluate each area individually and will report errors per area. This means that this API can successfully create or update some areas while rejecting others.
 
 Response example for a request without errors:
 ```json
@@ -68,9 +72,9 @@ Response example for a request **with errors**. In the example bellow the `area`
 }
 ```
 
-## Idempotency Primary Keys
+## Idempotent Primary Keys
 
-Primay keys fields define if areas will be updated or created. In simple terms: If one of the primary keys in the area payload is found in the area database the area will be updated. 
+Primary keys fields define if areas will be updated or created. In simple terms: If one of the primary keys in the area payload is found in the area database the area will be updated. 
 
 New areas are created only when none of the provided keys is found.
 
@@ -82,13 +86,13 @@ Notes:
 - Primary keys are not required, however when no primary keys are defined a new area will be created upon each request.
 - Calling a API with the same payload a second time (ie. same keys) will not create a new area, it will update the previsuly created area.
 
-## Available Fields per area
+## Available Fields per Area
 
 The only required fields are `name` and one of the primary key fields; We strongly recommend that you use additional keys to control how areas are created, otherwise this can lead to duplicated areas.
 
 
 #### `id` [AreaId] 
-Unique identifcation number for this Area. This field is option, if not provied a new unique field will be created.
+Unique identification number for this Area. This field is option, if not provided a new unique field will be created.
 This field is a *primary key* and should be used whenever this area needs to be updated.
 
 #### `name` [String] 
@@ -105,7 +109,7 @@ The area job post title.
 
 #### `active` [{`true`,`false`}]
 
-This fileld defines if the Area is active or not. Valid options are `true`, `false`. 
+This field defines if the Area is active or not. Valid options are `true`, `false`. 
 
 This field is not required, if not provided defaults to `active`.
 
@@ -119,11 +123,11 @@ Note the API will test for circlular references, this means that a child cannot 
 
 #### `businessDivision` [BusinessDivisionID]
 
-This fileld defines the Business Division of area. This needs to be a valid Business Division ID.
+This field defines the Business Division of area. This needs to be a valid Business Division ID.
 
 #### `responsibles` [[UserId]
 
-This fileld defines the Users that Are responsible for this Area. This field expects an array of users in the format `responsibles: ["507f1f77bcf86cd799439011","507f1f77bcf86cd799439011"]`. 
+This field defines the Users that Are responsible for this Area. This field expects an array of users in the format `responsibles: ["507f1f77bcf86cd799439011","507f1f77bcf86cd799439011"]`. 
 
 
 #### `address` [String]
