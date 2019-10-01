@@ -5,7 +5,7 @@ title: Area API | GET Data
 
 ## API Summary
 
-| Endpoint | **https://api.feedback.house/api/planning/v1/area** |
+| Endpoint | **https://api.feedback.house/api/planning/v1/area/query** |
 |----------|---------------------------------------------------|
 | Method   | **GET** |
 | Format   | **JSON** |
@@ -36,7 +36,7 @@ areas: [
  { 
     "id": "507f1f77bcf86cd799439022", 
     "name": "Area 2", 
-    "responsibles":[
+    "managers":[
          "507f1f77bcf86cd7994",
          "232507f1f77bcf86cd"
         ], 
@@ -81,9 +81,9 @@ Unique ID for this Area. This field is a *primary key* and should be used whenev
 #### `name` [String] 
 The area full name. This field is required. 
 
-#### `responsibles` [[UserId]]
+#### `managers` [[UserId]]
 
-Users that will have extra privileges for this Area. This field is an array of UserIds `responsibles: ["507f1f77bcf86cd7994","507f1f77bcf86cd1234"]`. 
+Users that will have extra privileges for this Area. This field is an array of UserIds `managers: ["507f1f77bcf86cd7994","507f1f77bcf86cd1234"]`. 
 
 #### `active` [{`true`,`false`}]
 

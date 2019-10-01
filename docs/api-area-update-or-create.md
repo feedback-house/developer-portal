@@ -5,7 +5,7 @@ title: Area API | Update or Create
 
 ## API Summary
 
-| Endpoint | **https://api.feedback.house/api/planning/v1/area-update-or-create** |
+| Endpoint | **https://api.feedback.house/api/planning/v1/area/update-or-create** |
 |----------|-------------------------------------------------------------|
 | Method   | **POST** |
 | Format   | **JSON** |
@@ -125,11 +125,11 @@ Note the API will test for circlular references, this means that a child cannot 
 
 This field defines the Business Division of area. This needs to be a valid Business Division ID.
 
-#### `responsibles` [[UserId]
+#### `managers` [[UserId]
 
 This field defines the Users that Are responsible for this Area. 
 
-This field expects an array of users in the format `responsibles: ["507f1f77bcf86cd799439011", "507f1f77bcf86cd799439011"]`. 
+This field expects an array of users in the format `managers: ["507f1f77bcf86cd799439011", "507f1f77bcf86cd799439011"]`. 
 
 #### `address` [String]
 
@@ -143,4 +143,4 @@ If your company have the ATS module enable it will list this area as public plac
 
 Arbitrary tags associated with this Area. 
 
-Tags can also be expressed in key value format, when using `:`. Tags that uses the format of `key:value`, enhancing reports and statics. Example: `projet:secret`, `status:new`, `erparea:yes`
+Tags can also be expressed in key value format, when using `:`. Tags that uses the format of `key:value`, enhancing reports and statics. Example: `project:secret`, `status:new`, `sap:yes`
