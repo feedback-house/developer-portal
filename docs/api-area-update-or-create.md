@@ -64,7 +64,7 @@ Response example for a request **with errors**. In the example bellow the `area`
     "errors": [
         {
         "object": {
-            "areaname": "Area Name",
+            "name": "Area Name",
             ...
         },
         "message": "Missing name field"

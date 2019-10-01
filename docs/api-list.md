@@ -3,7 +3,7 @@ id: api-list
 title: API List
 ---
 
-Most Feedback House modules suports APIs. APIs can be used indidually or leveraging data from other APIs.
+Most Feedback House modules supports APIs. APIs can be used individually or leveraging data from other APIs.
 
 ### Platform APIs:
 

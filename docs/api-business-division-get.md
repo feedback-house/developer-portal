@@ -1,6 +1,6 @@
 ---
 id: api-business-division-get
-title: Business Division API | Get Data
+title: Business Division API | GET Data
 ---
 
 ## API Summary
@@ -69,7 +69,7 @@ Example for a response with errors:
 }
 ```
 
-## Reponse Fields for each business division
+## Response Fields for each business division
 
 The only required fields are `name` and one of the primary key fields; We strongly recommend that you use additional keys to control how business divisions are created, otherwise this can lead to duplicated business divisions.
 
@@ -79,7 +79,7 @@ Unique ID for this Business Division. This field is a *primary key* and should b
 > This field can and should be used as **primary key** to detect if Business Division will be created or updated when using the Update or create API [business division Update or Create](./api-business division-update-or-create)
 
 #### `name` [String] 
-The business division fullname. This field is required. 
+The business division name. This field is required. 
 
 #### `responsibles` [[UserId]]
 

@@ -1,6 +1,6 @@
 ---
 id: api-user-get
-title: User API | Get Data
+title: User API | GET Data
 ---
 
 ## API Summary
@@ -12,7 +12,7 @@ title: User API | Get Data
 
 ## API details
 
-This endpoint allows quering and retriving `user` data. This API will return the most recent and updated `user` as possible.
+This endpoint allows querying and retrieving `user` data. This API will return the most recent and updated `user` as possible.
 
 Given the size of your company you may need to paginate this API in other to retrive all resources.
 
@@ -46,9 +46,7 @@ Example for a response with errors:
 }
 ```
 
-## Reponse Fields for each User
-
-The only required fields are `name` and one of the primary key fields; We strongly recommend that you use additional keys to control how users are created, otherwise this can lead to duplicated users.
+## Response Fields for each User
 
 #### `id` [Unique] 
 Unique ID for this user. This field is a *primary key* and should be used whenever this user needs to be updated.
@@ -56,7 +54,7 @@ Unique ID for this user. This field is a *primary key* and should be used whenev
 > This field can and should be used as **primary key** to detect if users will be created or updated when using the Update or create API [User Update or Create](./api-user-update-or-create)
 
 #### `name` [String] 
-The user fullname. This field is required. 
+The user full name. This field is required. 
 
 #### `emails` [[String]]
 
@@ -124,4 +122,4 @@ This field is not required, however when not provided it will be defined to a in
 
 Arbitrary tags associated with this user. 
 
-Tags can also be expressed in key value format, when using `:`. Tags that uses the format of `key:value`, enhancing reports and statics. Example: `projet:secret`, `status:new`, `erpuser:yes`
+Tags can also be expressed in key value format, when using `:`. Tags that uses the format of `key:value`, enhancing reports and statics. Example: `project:secret`, `status:new`, `sapuser:yes`

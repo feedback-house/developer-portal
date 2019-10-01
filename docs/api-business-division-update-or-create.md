@@ -13,9 +13,9 @@ title: Business Division API | Update or Create
 
 ## API details
 
-This endpoint supports creating or updating Business Divisions. This API was intentionaly designed with idea that it will first try find and update existing Business Divisions and only when no existing Business Division is found a new one will be created. 
+This endpoint supports creating or updating Business Divisions. This API was intentionally designed with idea that it will first try find and update existing Business Divisions and only when no existing Business Division is found a new one will be created. 
 
-This design allows this API to be regurlaly be called by your company. With this API you have a single endpoint that can handle multiple scenarios such as: Create new Business Division, update Business Division details (name for example), or even disable existing Business Division.
+This design allows this API to be regularly be called by your company. With this API you have a single endpoint that can handle multiple scenarios such as: Create new Business Division, update Business Division details (name for example), or even disable existing Business Division.
 
 When calling this API must design your code to pass the latest, most recent area information. If an existing Business Division is found, *using the primary keys*, the area will be updated. Only when no existing Business Division is found the API will create a new area.
 

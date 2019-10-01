@@ -13,7 +13,9 @@ title: User API | Update or Create
 
 ## API details
 
-This endpoint supports creating or updating users. This API was intentionaly designed with idea that it will first try find and update users and only when no existing user is found a new one will be created. This design allows this API to be regurlaly be called by your company. With this API you have a single endpoint that can handle multiple scenarios such as: User addmision, change user's manager, change user's area, or even disabling users when they leave your company.
+This endpoint supports creating or updating users. 
+
+This API was intentionally designed with idea that it will first try find and update users and only when no existing user is found a new one will be created. This design allows this API to be regularly be called by your company. With this API you have a single endpoint that can handle multiple scenarios such as: User admission, change user's manager, change user's area, or even disabling users when they leave your company.
 
 When calling this API must design your code to pass the latest, most updated user information. If an existing user is found, *using the primary keys*, the user will be updated. Only when no existing user is found the API will create a new user.
 
@@ -87,7 +89,7 @@ The only required fields are `name` and one of the primary key fields; We strong
 
 
 #### `name` [String] 
-The user fullname. This field is required. 
+The user full name. This field is required. 
 
 #### `emails` [[String]]
 
