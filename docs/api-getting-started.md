@@ -9,7 +9,9 @@ This document will help you with getting started with Feedback House APIs.
 
 All APIs request must be authenticated with a API key. In order to use APIs you first need to create a new API key. You can create API keys any time at your company API options page (*needs to be logged*).
 
-`Admin Panel` > `Permissions` > `APIs` and generate a new API key. In order to create APIs keys you need to have `ADMIN` privileges.
+`Admin Panel` > `Permissions` > `APIs` and generate a new API key. 
+
+In order to create APIs keys you need to have `ADMIN` privileges.
 
 ### API Usage Guidelines
 
@@ -27,3 +29,8 @@ API Guidelines:
 - Don't re-use keys new keys, you can generate multiple keys
 - Only generate keys when needed
 - Disable unused keys
+
+### APIs Restrictions
+
+- Header and Payload Size limits: Any request, regardless of the endpoint used, must not exceed 10Mb. 
+- Rate limit: You can't exceed 10 requests/second.

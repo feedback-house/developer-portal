@@ -127,8 +127,9 @@ This field defines the Business Division of area. This needs to be a valid Busin
 
 #### `responsibles` [[UserId]
 
-This field defines the Users that Are responsible for this Area. This field expects an array of users in the format `responsibles: ["507f1f77bcf86cd799439011","507f1f77bcf86cd799439011"]`. 
+This field defines the Users that Are responsible for this Area. 
 
+This field expects an array of users in the format `responsibles: ["507f1f77bcf86cd799439011", "507f1f77bcf86cd799439011"]`. 
 
 #### `address` [String]
 

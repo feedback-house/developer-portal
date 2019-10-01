@@ -5,8 +5,8 @@ title: User API | GET Data
 
 ## API Summary
 
-| Endpoint | **https://api.feedback.house/api/common/v1/user** |
-|----------|---------------------------------------------------|
+| Endpoint | **https://api.feedback.house/api/user/v1/user** |
+|----------|-------------------------------------------------|
 | Method   | **GET** |
 | Format   | **JSON** |
 
