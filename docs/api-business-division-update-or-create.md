@@ -15,9 +15,9 @@ title: Business Division API | Update or Create
 
 This endpoint supports creating or updating Business Divisions. This API was intentionaly designed with idea that it will first try find and update existing Business Divisions and only when no existing Business Division is found a new one will be created. 
 
-This design allows this API to be regurlaly be called by your company. With this API you have a single endpoint that can handle multiple scenarios such as: Creating new Business Division, changing Business Division details (name for example), or even disabling Business Division.
+This design allows this API to be regurlaly be called by your company. With this API you have a single endpoint that can handle multiple scenarios such as: Create new Business Division, update Business Division details (name for example), or even disable existing Business Division.
 
-When calling this API must design your code to pass the latest, most updated area information. If an existing Business Division is found, *using the primary keys*, the area will be updated. Only when no existing Business Division is found the API will create a new area.
+When calling this API must design your code to pass the latest, most recent area information. If an existing Business Division is found, *using the primary keys*, the area will be updated. Only when no existing Business Division is found the API will create a new area.
 
 ### Batch Operations
 
@@ -105,7 +105,7 @@ The area job post title.
 
 #### `active` [{`true`,`false`}]
 
-This fileld defines if the Business Division is active or not. Valid options are `true`, `false`. 
+This field defines if the Business Division is active or not. Valid options are `true`, `false`. 
 
 This field is not required, if not provided defaults to `active`.
 
@@ -119,11 +119,11 @@ Note the API will test for circlular references, this means that a child cannot 
 
 #### `businessDivision` [BusinessDivisionID]
 
-This fileld defines the Business Division of area. This needs to be a valid Business Division ID.
+This field defines the Business Division of area. This needs to be a valid Business Division ID.
 
 #### `responsibles` [[UserId]
 
-This fileld defines the Users that Are responsible for this Business Division. This field expects an array of users in the format `responsibles: ["507f1f77bcf86cd799439011","507f1f77bcf86cd799439011"]`. 
+This field defines the Users that Are responsible for this Business Division. This field expects an array of users in the format `responsibles: ["507f1f77bcf86cd799439011","507f1f77bcf86cd799439011"]`. 
 
 
 #### `address` [String]
