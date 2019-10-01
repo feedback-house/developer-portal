@@ -75,7 +75,7 @@ This field is not required, if not provided it will be set to `active`.
 
 #### `groups` [[GroupId]]
 
-Groups that this user bellongs to. 
+Groups that this user belongs to. 
 This field expects an array in the format `groups: ["507f1f77bcf86cd799439011","507f1f77bcf86cd799439011"]`. 
 
 Needs to be a valid `GroupID`

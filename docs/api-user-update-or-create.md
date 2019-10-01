@@ -19,7 +19,7 @@ When calling this API must design your code to pass the latest, most updated use
 
 ### Batch Operations
 
-This edpoint supports `batch` operations and as such expects **an array of users** (*in the format of an array of objects*). Each object must contain the user details:
+This endpoint supports `batch` operations and as such expects **an array of users** (*in the format of an array of objects*). Each object must contain the user details:
 
 ```json
 users: [
@@ -75,11 +75,11 @@ New users are created only when none of the provided keys is found.
 Primary key fields:
 - `emails` - The associated emails of a user are primary keys. Since users can have multiple emails, if one email is found the user will be updated.
 - `taxId` - The user taxID. (*ie. CPF, Social Security Number*)
-- `employeeId` - The user employeeId in the context of your company. You can use any key here as long you can controll it.
+- `employeeId` - The user employeeId in the context of your company. You can use any key here as long you can control it.
 
 Notes:
 - Primary keys are not required, however when no primary keys are defined a new user will be created upon each request.
-- Calling a API with the same payload a second time (ie. same keys) will not create a new user, it will update the previsuly created user.
+- Calling a API with the same payload a second time (ie. same keys) will not create a new user, it will update the previously created user.
 
 ## Available Fields per User
 
@@ -106,7 +106,7 @@ This field is not required, if not provided it will be set to `active`.
 
 #### `groups` [[GroupId]]
 
-Groups that this user bellongs to. 
+Groups that this user belongs to. 
 This field expects an array in the format `groups: ["507f1f77bcf86cd799439011","507f1f77bcf86cd799439011"]`. 
 
 Needs to be a valid `GroupID`
