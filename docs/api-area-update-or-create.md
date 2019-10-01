@@ -25,7 +25,7 @@ When calling this API must design your code to pass the latest, most updated are
 
 ### Batch Operations
 
-This edpoint supports `batch` operations and as such expects **an array of areas** (*in the format of an array of objects*). Each object must contain the Area details:
+This endpoint supports `batch` operations and as such expects **an array of areas** (*in the format of an array of objects*). Each object must contain the Area details:
 
 ```json
 areas: [
@@ -80,11 +80,11 @@ New areas are created only when none of the provided keys is found.
 
 Primary key fields:
 - `areaId` - The associated unique Id of this Area.
-- `correlation.areaId` - The area employeeId in the context of your company. You can use any key here as long you can controll it.
+- `correlation.areaId` - The area employeeId in the context of your company. You can use any key here as long you can control it.
 
 Notes:
 - Primary keys are not required, however when no primary keys are defined a new area will be created upon each request.
-- Calling a API with the same payload a second time (ie. same keys) will not create a new area, it will update the previsuly created area.
+- Calling a API with the same payload a second time (ie. same keys) will not create a new area, it will update the previously created area.
 
 ## Available Fields per Area
 
@@ -115,7 +115,7 @@ This field is not required, if not provided defaults to `active`.
 
 #### `parent` [[GroupId]]
 
-Parent Area that this Area bellongs to. This allows creating complex hierarquies.
+Parent Area that this Area belongs to. This allows creating complex hierarquies.
 
 Needs to be a valid `AreaId`.
 
