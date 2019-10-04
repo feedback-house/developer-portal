@@ -39,8 +39,6 @@ If you encounter issues using the platform please check the folling requirements
 - Ensure you have white list Feedback House domains in your proxy server, or internal firewall. Your users should be able to access all domains and subdomains.
   
   > You have to white list all feedback house domains *.feedback.house
-  
-  > You have to white list all feedback house domains *.feedback.house
 
 - Ensure you are not blocking emails from feedback house domain.
   
