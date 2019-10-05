@@ -28,7 +28,10 @@ class Footer extends React.Component {
       <footer className="nav-footer" id="footer">
         <section className="sitemap">
           <div>
-            <h5>Docs</h5>
+            <h5>Documents</h5>
+            <a href='/'>
+              Home
+            </a>
             <a href={this.docUrl('getting-started', this.props.language)}>
               Getting Started 
             </a>
