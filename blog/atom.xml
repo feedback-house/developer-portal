@@ -20,30 +20,4 @@
             <uri>http://twitter.com/ericnakagawa</uri>
         </author>
     </entry>
-    <entry>
-        <title type="html"><![CDATA[Adding RSS Support]]></title>
-        <id>https://developers.feedback.house/blog/2017/09/26/adding-rss.html</id>
-        <link href="https://developers.feedback.house/blog/2017/09/26/adding-rss.html">
-        </link>
-        <updated>2017-09-26T06:00:00Z</updated>
-        <summary type="html"><![CDATA[<p>This is a test post.</p> <p>A whole bunch of other information.</p> ]]></summary>
-        <author>
-            <name>Eric Nakagawa</name>
-            <uri>http://twitter.com/ericnakagawa</uri>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Adding RSS Support - RSS Truncation Test]]></title>
-        <id>https://developers.feedback.house/blog/2017/09/25/testing-rss.html</id>
-        <link href="https://developers.feedback.house/blog/2017/09/25/testing-rss.html">
-        </link>
-        <updated>2017-09-25T06:00:00Z</updated>
-        <summary type="html"><![CDATA[<p>1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890</p>
-<p>This should be truncated.</p>
-]]></summary>
-        <author>
-            <name>Rafael Turk</name>
-            <uri>https://twitter.com/rafaturk</uri>
-        </author>
-    </entry>
 </feed>

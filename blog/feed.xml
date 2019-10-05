@@ -20,21 +20,5 @@
             <pubDate>Tue, 24 Oct 2017 06:00:00 GMT</pubDate>
             <description><![CDATA[<p>This blog post will test file name parsing issues when periods are present.</p> ]]></description>
         </item>
-        <item>
-            <title><![CDATA[Adding RSS Support]]></title>
-            <link>https://developers.feedback.house/blog/2017/09/26/adding-rss.html</link>
-            <guid>https://developers.feedback.house/blog/2017/09/26/adding-rss.html</guid>
-            <pubDate>Tue, 26 Sep 2017 06:00:00 GMT</pubDate>
-            <description><![CDATA[<p>This is a test post.</p> <p>A whole bunch of other information.</p> ]]></description>
-        </item>
-        <item>
-            <title><![CDATA[Adding RSS Support - RSS Truncation Test]]></title>
-            <link>https://developers.feedback.house/blog/2017/09/25/testing-rss.html</link>
-            <guid>https://developers.feedback.house/blog/2017/09/25/testing-rss.html</guid>
-            <pubDate>Mon, 25 Sep 2017 06:00:00 GMT</pubDate>
-            <description><![CDATA[<p>1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890</p>
-<p>This should be truncated.</p>
-]]></description>
-        </item>
     </channel>
 </rss>
