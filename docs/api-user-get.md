@@ -12,7 +12,7 @@ title: User API | GET Data
 
 ## API details
 
-This endpoint allows querying and retrieving `user` data. This API will return the most recent and updated `user` as possible.
+This endpoint allows querying and retrieving `user` data. 
 
 Given the size of your company you may need to paginate this API in other to retrive all resources.
 
@@ -35,8 +35,6 @@ users: []
 ```
 
 ### Error reporting
-
-For each request the API will evaluate each user individually and will report errors per user. This means that this API can sucesslfully create or update some users while rejecting others.
 
 Example for a response with errors:
 ```json
