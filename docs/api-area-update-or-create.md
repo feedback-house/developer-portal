@@ -31,7 +31,7 @@ This endpoint supports `batch` operations and as such expects **an array of area
 areas: [
  { "name": "Area 1", ... },
  { "name": "Area 2", "address": "56, 3rd Ave, New York, NY 10003", ... },
- { "name": "Area 3", "responsibles": ["507f1f77bcf86cd799439011"], "allowCandidatesApply": true, ... },
+ { "name": "Area 3", "managers": ["507f1f77bcf86cd799439011"], "allowCandidatesApply": true, ... },
  ...
 ]
 ```
@@ -100,12 +100,11 @@ The area name. This field is required.
 
 #### `businessDivision` [[BusinessDivisionId]]
 
-Business Division that this Area Belongs. Area can only belong to one Business Division. 
+Business Division that this Area Belongs. 
 
-> This field will also be used as **primary key** to detect if areas will be created or updated.
+Area can only belong to one Business Division. 
 
-#### `title` [String]
-The area job post title. 
+This field is optional
 
 #### `active` [{`true`,`false`}]
 
@@ -113,7 +112,7 @@ This field defines if the Area is active or not. Valid options are `true`, `fals
 
 This field is not required, if not provided defaults to `active`.
 
-#### `parent` [[GroupId]]
+#### `parent` [[AreaId]]
 
 Parent Area that this Area belongs to. This allows creating complex hierarquies.
 
@@ -133,11 +132,18 @@ This field expects an array of users in the format `managers: ["507f1f77bcf86cd7
 
 #### `address` [String]
 
-This field defines the Area that this area belongs. This fields expects a valid `AreaID`
+This field defines an optional Address for this Area.
+
+This fields expects an Address in the format `Streat, Number, Complement, Country`
+
+This fields will be post-processed and attempt to create a geo-location coordinate.
+
 
 #### `allowCandidatesApply` [{`true`,`false`}]
 
-If your company have the ATS module enable it will list this area as public places that candidates can apply to. This field is not required, when not provided defaults `false`.
+If your company have the ATS module enable it will list this area as public places that candidates can apply to. 
+
+This field is not required, when not provided defaults `false`.
 
 #### `tags` [[String]]
 
