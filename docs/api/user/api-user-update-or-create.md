@@ -1,6 +1,7 @@
 ---
 id: api-user-update-or-create
 title: User API | Update or Create
+sidebar_label: Update or Create
 ---
 
 ## API Summary

@@ -5,7 +5,10 @@
   },
   "docs-api": {
     "API Overview": ["api-getting-started", "api-list"],
-    "API User": ["api-user-update-or-create", "api-user-get"],
+    "API User": [
+      "api/user/api-user-update-or-create", 
+      "api/user/api-user-get"
+    ],
     "API Area": [
       "api/area/api-area-update-or-create", 
       "api/area/api-area-get",

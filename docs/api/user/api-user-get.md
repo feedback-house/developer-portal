@@ -1,6 +1,7 @@
 ---
 id: api-user-get
 title: User API | GET Data
+sidebar_label: Get Data
 ---
 
 ## API Summary
