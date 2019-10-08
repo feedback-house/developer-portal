@@ -1,6 +1,7 @@
 ---
 id: api-business-division-update-or-create
 title: Business Division API | Update or Create
+sidebar_label: Update or Create
 ---
 
 ## API Summary
@@ -106,6 +107,7 @@ The area job post title.
 #### `active` [{`true`,`false`}]
 
 This field defines if the Business Division is active or not. Valid options are `true`, `false`. 
+
 
 This field is not required, if not provided defaults to `active`.
 

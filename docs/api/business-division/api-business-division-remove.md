@@ -1,6 +1,7 @@
 ---
 id: api-business-division-user-remove
 title: Business Division API | Remove Users from Business Division
+sidebar_label: Remove Users from Business Division
 ---
 
 ## API Summary

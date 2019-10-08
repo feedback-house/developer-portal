@@ -16,9 +16,9 @@
       "api/area/api-area-user-remove"
     ],
     "API Business Division": [
-      "api-business-division-update-or-create", 
-      "api-business-division-get",
-      "api-business-division-user-add",
-      "api-business-division-user-remove"]
+      "api/business-division/api-business-division-update-or-create", 
+      "api/business-division/api-business-division-get",
+      "api/business-division/api-business-division-user-add",
+      "api/business-division/api-business-division-user-remove"]
   }
 }

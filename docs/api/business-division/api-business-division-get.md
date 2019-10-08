@@ -1,6 +1,7 @@
 ---
 id: api-business-division-get
 title: Business Division API | GET Data
+sidebar_label: Get Data
 ---
 
 ## API Summary

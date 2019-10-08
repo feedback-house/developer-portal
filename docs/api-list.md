@@ -9,9 +9,9 @@ Most Feedback House modules supports APIs. APIs can be used individually or leve
 
 | Module   | API                                  | Description | 
 |----------|--------------------------------------|-------------|
-| All      | [User](api-user-update-or-create.md) | This API can Update or Create Users. **This is the most used API and is recommended that you check this one first.**  |
-| All      | [User GET](api-user-get.md)          | This API retrieve Users data.          |
-| Planning | [Area](api-area-update-or-create.md) | This API can Update or Create Areas.   |
-| Planning | [Area GET](api-area-get.md)          | This API query and retrieve Areas.     |
-| Planning | [Business Division](api-business-division-update-or-create.md) | This API can Update or Create Business Divisions.   |
-| Planning | [Business Division GET](api-business-division-get.md)          | This API query and retrieve Business Divisions.     |
+| All      | [User](api/user/api-user-update-or-create) | This API can Update or Create Users. **This is the most used API and is recommended that you check this one first.**  |
+| All      | [User GET](api/user/api-user-get)          | This API retrieve Users data.          |
+| Planning | [Area](api/area/api-area-update-or-create) | This API can Update or Create Areas.   |
+| Planning | [Area GET](api/area/api-area-get)          | This API query and retrieve Areas.     |
+| Planning | [Business Division](api/business-division/api-business-division-update-or-create) | This API can Update or Create Business Divisions.   |
+| Planning | [Business Division GET](api/business-division/api-business-division-get)          | This API query and retrieve Business Divisions.     |
