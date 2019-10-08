@@ -26,7 +26,7 @@ APIs keys are extremely powerful since they can create or read data from your co
 API Guidelines:
 
 - Don't share keys with third parties
-- Don't re-use keys new keys, you can generate multiple keys
+- Don't re-use keys - Access Keys, you can generate multiple keys
 - Only generate keys when needed
 - Disable unused keys
 
