@@ -58,7 +58,7 @@ Response example for a request **with errors**. In the example bellow the requir
 ```json
 {
     "status": "OK",
-    "message": "Created 3 | Updated 2 | Errors 1",
+    "message": "Updated 2 | Errors 1",
     "errors": [
         {
         "object": {
