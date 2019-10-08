@@ -1,6 +1,7 @@
 ---
 id: api-area-get
 title: Area API | GET Data
+sidebar_label: Get Data
 ---
 
 ## API Summary

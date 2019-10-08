@@ -1,6 +1,7 @@
 ---
 id: api-area-user-add
 title: Area API | Add Users to Area
+sidebar_label: Add Users to Area
 ---
 
 ## API Summary

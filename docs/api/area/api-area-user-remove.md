@@ -1,6 +1,7 @@
 ---
 id: api-area-user-remove
 title: Area API | Remove Users from Area
+sidebar_label: Remove Users from Area
 ---
 
 ## API Summary

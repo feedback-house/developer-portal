@@ -7,10 +7,10 @@
     "API Overview": ["api-getting-started", "api-list"],
     "API User": ["api-user-update-or-create", "api-user-get"],
     "API Area": [
-      "api-area-update-or-create", 
-      "api-area-get",
-      "api-area-user-add",
-      "api-area-user-remove"
+      "api/area/api-area-update-or-create", 
+      "api/area/api-area-get",
+      "api/area/api-area-user-add",
+      "api/area/api-area-user-remove"
     ],
     "API Business Division": [
       "api-business-division-update-or-create", 

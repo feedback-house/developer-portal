@@ -1,6 +1,7 @@
 ---
 id: api-area-update-or-create
 title: Area API | Update or Create
+sidebar_label: Update or Create
 ---
 
 ## API Summary
@@ -112,7 +113,7 @@ This field defines if the Area is active or not. Valid options are `true`, `fals
 
 This field is not required, if not provided defaults to `active`.
 
-#### `parent` [[AreaId]]
+#### `parent` [AreaId]
 
 Parent Area that this Area belongs to. This allows creating complex hierarquies.
 
