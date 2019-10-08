@@ -75,7 +75,7 @@ Primary keys fields define if users will be updated or created. In simple terms:
 New users are created only when none of the provided keys is found.
 
 #### Primary key fields:
-- `id` - Unique ID of a `User`. This is crated and managed by the Feedback House Platform, this `Id` is returned when users are created, or via the query API GET
+- `id` - Unique ID of a `User`. This is created and managed by the Feedback House Platform, this `Id` is returned when users are created, or via the query API GET
 - `emails` - The associated emails of a user are primary keys. Note users can have multiple emails, if one email is found the user will be updated.
 - `taxId` - The user taxID. (*ie. CPF, Social Security Number*)
 - `employeeId` - The user employeeId in the context of your company. You can use any key here as long you can control it.
@@ -149,7 +149,7 @@ This field expects an array of strings in the format `phoneNumbers: ["+55 11 976
 
 #### `birthDate`
 
-This field defines de user birth date, format is `YYYY/MM/DD`.
+This field defines the user birth date, format is `YYYY/MM/DD`.
 
 #### `admissionDate` 
 

@@ -96,7 +96,7 @@ Note: Phone number logic is not strictly enforced. This API will try, in a best 
 
 #### `birthDate`
 
-This field defines de user birth date, format is `YYYY/MM/DD`.
+This field defines the user birth date, format is `YYYY/MM/DD`.
 
 #### `admissionDate` 
 

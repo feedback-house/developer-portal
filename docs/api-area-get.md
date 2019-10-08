@@ -25,7 +25,7 @@ areas: [
  { 
     "id": "507f1f77bcf86cd799439011", 
     "name": "Area 1", 
-    "members": [
+    "users": [
       "507f1f77bcf86cd7911",
       "507f1f77bcf86cd7912",
       "507f1f77bcf86cd7913",
@@ -80,6 +80,10 @@ Unique ID for this Area. This field is a *primary key* and should be used whenev
 
 #### `name` [String] 
 The area full name. This field is required. 
+
+#### `users` [[UserId]]
+
+Users that belongs this Area. This field is an array of UserIds `users: ["507f1f77bcf86cd7994","507f1f77bcf86cd1234"]`. 
 
 #### `managers` [[UserId]]
 

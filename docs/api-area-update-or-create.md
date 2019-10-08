@@ -98,7 +98,7 @@ This field is a *primary key* and should be used whenever this area needs to be 
 #### `name` [String] 
 The area name. This field is required. 
 
-#### `businessDivision` [[BusinessDivisionId]]
+#### `businessDivision` [BusinessDivisionID]
 
 Business Division that this Area Belongs. 
 
@@ -120,11 +120,7 @@ Needs to be a valid `AreaId`.
 
 Note the API will test for circlular references, this means that a child cannot be a parent to another area, even in a nested chain.
 
-#### `businessDivision` [BusinessDivisionID]
-
-This field defines the Business Division of area. This needs to be a valid Business Division ID.
-
-#### `managers` [[UserId]
+#### `managers` [[UserId]]
 
 This field defines the Users that Are responsible for this Area. 
 

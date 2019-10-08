@@ -25,7 +25,7 @@ business divisions: [
  { 
     "id": "507f1f77bcf86cd799439011", 
     "name": "Business Division 1", 
-    "members": [
+    "users": [
       "507f1f77bcf86cd7911",
       "507f1f77bcf86cd7912",
       "507f1f77bcf86cd7913",
@@ -80,6 +80,10 @@ Unique ID for this Business Division. This field is a *primary key* and should b
 
 #### `name` [String] 
 The business division name. This field is required. 
+
+#### `users` [[UserId]]
+
+Users that belongs this Business Division. This field is an array of UserIds `users: ["507f1f77bcf86cd7994","507f1f77bcf86cd1234"]`.
 
 #### `responsibles` [[UserId]]
 
