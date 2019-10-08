@@ -7,7 +7,9 @@ This document will help you with getting started with Feedback House APIs.
 
 ### Creating new API key
 
-All APIs request must be authenticated with a API key. In order to use APIs you first need to create a new API key. You can create API keys any time at your company API options page (*needs to be logged*).
+All APIs request must be authenticated with a API key. 
+
+In order to use APIs you first need to create a new API key. You can create API keys any time at your company API options page (*needs to be logged*).
 
 `Admin Panel` > `Permissions` > `APIs` and generate a new API key. 
 
