@@ -9,7 +9,8 @@
     "API Area": [
       "api-area-update-or-create", 
       "api-area-get",
-      "api-area-user-add"
+      "api-area-user-add",
+      "api-area-user-remove"
     ],
     "API Business Division": ["api-business-division-update-or-create", "api-business-division-get"]
   }

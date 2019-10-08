@@ -1,11 +1,11 @@
 ---
-id: api-area-user-add
-title: Area API | Add Users to Area
+id: api-area-user-remove
+title: Area API | Remove Users from Area
 ---
 
 ## API Summary
 
-| Endpoint | **https://api.feedback.house/api/planning/v1/area/user-add** |
+| Endpoint | **https://api.feedback.house/api/planning/v1/area/user-remove** |
 |----------|-------------------------------------------------------------|
 | Method   | **POST** |
 | Format   | **JSON** |
@@ -13,11 +13,11 @@ title: Area API | Add Users to Area
 
 ## API details
 
-This endpoint will **add** existing `Users` to existing `Areas`. 
+This endpoint will **remove**  `Users` from `Areas`. 
 
 Area is the smallest unit of a group of colleagues working with a single purpose. 
 
-This API was intentionally designed with idea that it will be able to be called multiple times. So user will be only included to a Area only once, regardless of the number of calls you make to this APIs.
+This API was intentionally designed with idea that it will be able to be called multiple times. 
 
 ### Batch Operations
 
@@ -26,7 +26,7 @@ This endpoint supports `batch` operations and as such expects **an array of area
 Each object must contain the expected user or users to be included. This means that you can use this API to update multiple distinctive areas. This behavior is optional and not required.
 
 ```json
-area-user-add: [
+area-user-remove: [
  { "areaId": "997f1f77bcf86cd799439011", "users": ["507f1f77bcf86cd799439011","507f1f77bcf86cd799439012"] },
  { "areaId": "997f1f77bcf86cd799439011", "users": ["507f1f77bcf86cd799439014","507f1f77bcf86cd799439016"] },
  { "areaId": "997f1f77bcf86cd799439012", "users": ["507f1f77bcf86cd799439011"] },
@@ -34,10 +34,10 @@ area-user-add: [
 ]
 ```
 
-If you need to add just one user you can call the API with just one area in the array object:
+If you need to remove just one user you can call the API with just one area in the array object:
 
 ```json
-area-user-add: [ { "areaId": "997f1f77bcf86cd799439011", "users": ["507f1f77bcf86cd799439011"] },]
+area-user-remove: [ { "areaId": "997f1f77bcf86cd799439011", "users": ["507f1f77bcf86cd799439011"] },]
 ```
 
 
@@ -54,7 +54,7 @@ Response example for a request without errors:
 }
 ```
 
-Response example for a request **with errors**. In the example bellow the required field `users` field is missing.
+Response example for a request **with errors**. In the example bellow the required field `users` is missing.
 ```json
 {
     "status": "OK",
@@ -72,7 +72,7 @@ Response example for a request **with errors**. In the example bellow the requir
 
 ## Primary Keys
 
-The `areadId` field define which `Areas` will be updated with new users.
+The `areadId` field define which `Areas` will be have users removed.
 
 
 Primary key fields:
@@ -92,6 +92,6 @@ This field is required.
 
 #### `users` [[UserId]]
 
-This field defines the `Users` that will be included in this Area. 
+This field defines the `Users` that will be removed fromthis Area. 
 
 This field expects an array of users in the format `users: ["507f1f77bcf86cd799439011", "507f1f77bcf86cd799439011"]`. 
