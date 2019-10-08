@@ -6,7 +6,11 @@
   "docs-api": {
     "API Overview": ["api-getting-started", "api-list"],
     "API User": ["api-user-update-or-create", "api-user-get"],
-    "API Area": ["api-area-update-or-create", "api-area-get"],
+    "API Area": [
+      "api-area-update-or-create", 
+      "api-area-get",
+      "api-area-user-add"
+    ],
     "API Business Division": ["api-business-division-update-or-create", "api-business-division-get"]
   }
 }
