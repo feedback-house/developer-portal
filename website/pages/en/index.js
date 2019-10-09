@@ -137,7 +137,7 @@ class Index extends React.Component {
         {[
           {
             content: 
-              `Single Sign On is an important security and user experience feature that automatically authenticate your users using credentials from your company.</br>` +
+              `Single Sign On is an important security feature that automatically authenticate your users using credentials from your company.</br>` +
               `</br>Feedback House supports multiple login strategies, that can be even used simultaneously.</br>` +
               `</br>Check the [**Single Sign On**](/docs/single-sign-on-getting-started.html) documentation.`,
             image: `${baseUrl}img/undraw_youtube_tutorial.svg`,
