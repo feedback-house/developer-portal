@@ -20,6 +20,8 @@ Area is the smallest unit of a group of colleagues working with a single purpose
 
 This API was intentionally designed with idea that it will be able to be called multiple times. So user will be only included to a Area only once, regardless of the number of calls you make to this APIs.
 
+> Note: This API will enforce the payload received. This means that if `AreaId` and `UserId` are both correct the user will be transferred to the new Area, regardless of any other previous setting.
+
 ### Batch Operations
 
 This endpoint supports `batch` operations and as such expects **an array of areas** (*in the format of an array of objects*). 
