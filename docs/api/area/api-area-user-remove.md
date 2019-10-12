@@ -6,7 +6,7 @@ sidebar_label: Remove Users from Area
 
 ## API Summary
 
-| Endpoint | **https://api.feedback.house/api/planning/v1/area/user-remove** |
+| Endpoint | **https://api.feedback.house/api/planning/area/v1/user-remove** |
 |----------|-------------------------------------------------------------|
 | Method   | **POST** |
 | Format   | **JSON** |

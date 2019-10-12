@@ -6,7 +6,7 @@ sidebar_label: Add Users to Business Division
 
 ## API Summary
 
-| Endpoint | **https://api.feedback.house/api/planning/v1/business-division/user-add** |
+| Endpoint | **https://api.feedback.house/api/planning/business-division/v1/user-add** |
 |----------|-------------------------------------------------------------|
 | Method   | **POST** |
 | Format   | **JSON** |

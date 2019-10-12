@@ -6,7 +6,7 @@ sidebar_label: Remove Users from Business Division
 
 ## API Summary
 
-| Endpoint | **https://api.feedback.house/api/planning/v1/business-division/user-remove** |
+| Endpoint | **https://api.feedback.house/api/planning/business-division/v1/user-remove** |
 |----------|-------------------------------------------------------------|
 | Method   | **POST** |
 | Format   | **JSON** |

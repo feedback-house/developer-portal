@@ -6,7 +6,7 @@ sidebar_label: Add Users to Area
 
 ## API Summary
 
-| Endpoint | **https://api.feedback.house/api/planning/v1/area/user-add** |
+| Endpoint | **https://api.feedback.house/api/planning/area/v1/user-add** |
 |----------|-------------------------------------------------------------|
 | Method   | **POST** |
 | Format   | **JSON** |

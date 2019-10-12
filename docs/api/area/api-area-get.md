@@ -6,7 +6,7 @@ sidebar_label: Get Data
 
 ## API Summary
 
-| Endpoint | **https://api.feedback.house/api/planning/v1/area/query** |
+| Endpoint | **https://api.feedback.house/api/planning/area/v1/query** |
 |----------|---------------------------------------------------|
 | Method   | **GET** |
 | Format   | **JSON** |

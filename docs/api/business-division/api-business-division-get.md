@@ -6,7 +6,7 @@ sidebar_label: Get Data
 
 ## API Summary
 
-| Endpoint | **https://api.feedback.house/api/planning/v1/business-division** |
+| Endpoint | **https://api.feedback./api/planning/business-division/v1/query** |
 |----------|---------------------------------------------------|
 | Method   | **GET** |
 | Format   | **JSON** |
@@ -22,7 +22,7 @@ Given the size of your company you may need to paginate this API in other to ret
 This API will return multiple `business divisions` in **an array of business divisions** (*in the format of an array of objects*). 
 
 ```json
-business divisions: [
+businessDivisions: [
  { 
     "id": "507f1f77bcf86cd799439011", 
     "name": "Business Division 1", 

@@ -6,7 +6,7 @@ sidebar_label: Update or Create
 
 ## API Summary
 
-| Endpoint | **https://api.feedback.house/api/planning/v1/area-update-or-create** |
+| Endpoint | **https://api.feedback.house/api/planning/business-division/v1/update-or-create** |
 |----------|-------------------------------------------------------------|
 | Method   | **POST** |
 | Format   | **JSON** |
@@ -25,7 +25,7 @@ When calling this API must design your code to pass the latest, most recent area
 This endpoint supports `batch` operations and as such expects **an array of areas** (*in the format of an array of objects*). Each object must contain the Business Division details:
 
 ```json
-areas: [
+businessDivisions: [
  { "name": "Business Division 1", ... },
  { "name": "Business Division 2", "address": "56, 3rd Ave, New York, NY 10003", ... },
  { "name": "Business Division 3", "responsibles": ["507f1f77bcf86cd799439011"], "allowCandidatesApply": true, ... },
@@ -36,7 +36,7 @@ areas: [
 If you need to create or update just one area you can call the API with just one area in the array object:
 
 ```json
-areas: [ { "name": "area 1", "active": true, ... },]
+businessDivisions: [ { "name": "business division 1", "active": true, ... },]
 ```
 
 
