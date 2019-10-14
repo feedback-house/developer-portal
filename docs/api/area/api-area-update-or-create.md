@@ -53,6 +53,10 @@ Response example for a request without errors:
 {
     "status": "OK",
     "message": "Created 10 | Updated 105 | Errors 0",
+    "data": [
+      {  "name": "Area 1", ... },
+      {  "name": "Area 2", ... },
+    ],
     "errors": []
 }
 ```
@@ -80,8 +84,8 @@ Primary keys fields define if areas will be updated or created. In simple terms:
 New areas are created only when none of the provided keys is found.
 
 Primary key fields:
-- `areaId` - The associated unique Id of this Area.
-- `correlation.areaId` - The area employeeId in the context of your company. You can use any key here as long you can control it.
+- `id` - The associated unique Id of this Area.
+- `correlationID` - The area employeeId in the context of your company. You can use any key here as long you can control it.
 
 Notes:
 - Primary keys are not required, however when no primary keys are defined a new area will be created upon each request.
@@ -89,15 +93,14 @@ Notes:
 
 ## Available Fields per Area
 
-The only required fields are `name` and one of the primary key fields; We strongly recommend that you use additional keys to control how areas are created, otherwise this can lead to duplicated areas.
-
+The only required field is `name` and just when the id was not passed. So when is creating a new area, the name will be required; We strongly recommend that you use additional keys to control how areas are created, otherwise this can lead to duplicated areas.
 
 #### `id` [AreaId] 
 Unique identification number for this Area. This field is option, if not provided a new unique field will be created.
 This field is a *primary key* and should be used whenever this area needs to be updated.
 
 #### `name` [String] 
-The area name. This field is required. 
+The area name. This field is required when id was not provided. 
 
 #### `businessDivision` [BusinessDivisionID]
 
@@ -123,18 +126,9 @@ Note the API will test for circlular references, this means that a child cannot 
 
 #### `managers` [[UserId]]
 
-This field defines the Users that Are responsible for this Area. 
+This field defines the Users that are responsible for this Area. 
 
 This field expects an array of users in the format `managers: ["507f1f77bcf86cd799439011", "507f1f77bcf86cd799439011"]`. 
-
-#### `address` [String]
-
-This field defines an optional Address for this Area.
-
-This fields expects an Address in the format `Streat, Number, Complement, Country`
-
-This fields will be post-processed and attempt to create a geo-location coordinate.
-
 
 #### `allowCandidatesApply` [{`true`,`false`}]
 
