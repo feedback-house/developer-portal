@@ -6,7 +6,7 @@ sidebar_label: Update or Create
 
 ## API Summary
 
-| Endpoint | **https://api.feedback.house/api/user/v1/update-or-create** |
+| Endpoint | **https://api.feedback.house/api/common/user/v1/update-or-create** |
 |----------|-------------------------------------------------------------|
 | Method   | **POST** |
 | Format   | **JSON** |
