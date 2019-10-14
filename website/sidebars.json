@@ -7,7 +7,8 @@
     "API Overview": ["api-getting-started", "api-list"],
     "API User": [
       "api/user/api-user-update-or-create", 
-      "api/user/api-user-get"
+      "api/user/api-user-get",
+      "api/user/api-user-get-id"
     ],
     "API Area": [
       "api/area/api-area-update-or-create", 
