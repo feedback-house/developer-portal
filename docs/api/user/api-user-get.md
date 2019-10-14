@@ -6,7 +6,7 @@ sidebar_label: Get Data
 
 ## API Summary
 
-| Endpoint | **https://api.feedback.house/api/user/v1/user** |
+| Endpoint | **https://api.feedback.house/api/common/user/v1/users** |
 |----------|-------------------------------------------------|
 | Method   | **GET** |
 | Format   | **JSON** |
