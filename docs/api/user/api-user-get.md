@@ -11,6 +11,22 @@ sidebar_label: Get Data
 | Method   | **GET** |
 | Format   | **JSON** |
 
+## API Pagination
+
+
+### Iterative
+| Name | Description|
+|----------|-------------------------------------------------|
+| skip   | Specify a number for record return |
+| limit   | Specify a threshold for record return |
+
+### Informative
+| Name | Description|
+|----------|-------------------------------------------------|
+| totalCount   | Total count of records |
+| hasPreviousPage   | If has a previous page of records |
+| hasNextPage   | If has a next page of records |
+
 ## API details
 
 This endpoint allows querying and retrieving `user` data. 
