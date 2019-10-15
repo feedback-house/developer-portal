@@ -27,7 +27,7 @@ businessDivisions: [
     "id": "507f1f77bcf86cd799439011", 
     "name": "Business Division 1", 
     "users": [
-      "507f1f77bcf86cd7911",
+      "507f1f77bcf86cd7911",~~~~
       "507f1f77bcf86cd7912",
       "507f1f77bcf86cd7913",
     ], 
