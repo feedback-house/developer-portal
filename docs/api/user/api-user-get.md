@@ -13,6 +13,8 @@ sidebar_label: Get Data
 
 ## API Pagination
 
+This api always return a object that contains pagination information like those below. This object will have fields iterative and informative. 
+If you don't pass values for `skip` or `limit`, it will assume `skip: 0` and `limit: 100` by default.
 
 ### Iterative
 | Name | Description|
@@ -26,6 +28,16 @@ sidebar_label: Get Data
 | totalCount   | Total count of records |
 | hasPreviousPage   | If has a previous page of records |
 | hasNextPage   | If has a next page of records |
+
+```json
+  "pageInfo": Object {
+    "hasNextPage": false,
+    "hasPreviousPage": false,
+    "limit": 100,
+    "skip": 0,
+    "totalCount": 7,
+  },
+```
 
 ## API details
 
