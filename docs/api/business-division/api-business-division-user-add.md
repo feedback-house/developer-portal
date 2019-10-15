@@ -1,5 +1,5 @@
 ---
-id: api-businesDivisionUsersAdd
+id: api-business-division-user-add
 title: Business Division API | Add Users to Business Division
 sidebar_label: Add Users to Business Division
 ---
