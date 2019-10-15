@@ -11,6 +11,34 @@ sidebar_label: Get Data
 | Method   | **GET** |
 | Format   | **JSON** |
 
+## API Pagination
+
+This api always return a object that contains pagination information like those below. This object will have fields iterative and informative. 
+If you don't pass values for `skip` or `limit`, it will assume `skip: 0` and `limit: 100` by default.
+
+### Iterative
+| Name | Description|
+|----------|-------------------------------------------------|
+| skip   | Specify a number for record return |
+| limit   | Specify a threshold for record return |
+
+### Informative
+| Name | Description|
+|----------|-------------------------------------------------|
+| totalCount   | Total count of records |
+| hasPreviousPage   | If has a previous page of records |
+| hasNextPage   | If has a next page of records |
+
+```json
+  "pageInfo": Object {
+    "hasNextPage": false,
+    "hasPreviousPage": false,
+    "limit": 100,
+    "skip": 0,
+    "totalCount": 7,
+  },
+```
+
 ## API details
 
 This endpoint allows querying and retrieving `Area` data. This API will return the most recent and updated `Area` as possible.
