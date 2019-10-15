@@ -27,7 +27,7 @@ This endpoint supports `batch` operations and as such expects **an array of area
 Each object must contain the expected user or users to be included. This means that you can use this API to update multiple distinctive areas. This behavior is optional and not required.
 
 ```json
-area-user-remove: [
+areaUsersRemove: [
  { "areaId": "997f1f77bcf86cd799439011", "users": ["507f1f77bcf86cd799439011","507f1f77bcf86cd799439012"] },
  { "areaId": "997f1f77bcf86cd799439011", "users": ["507f1f77bcf86cd799439014","507f1f77bcf86cd799439016"] },
  { "areaId": "997f1f77bcf86cd799439012", "users": ["507f1f77bcf86cd799439011"] },
@@ -38,36 +38,70 @@ area-user-remove: [
 If you need to remove just one user you can call the API with just one area in the array object:
 
 ```json
-area-user-remove: [ { "areaId": "997f1f77bcf86cd799439011", "users": ["507f1f77bcf86cd799439011"] },]
+areaUsersRemove: [ { "areaId": "997f1f77bcf86cd799439011", "users": ["507f1f77bcf86cd799439011"] },]
 ```
-
 
 ### Response and Error reporting
 
-For each request the API will evaluate each `Area` individually and will report errors per area. This means that this API can successfully create or update some areas while rejecting others.
+For each request the API will evaluate each `Area` individually and will report errors per area. This means that this API can successfully update some areas while rejecting others. If some user dont belongs that area is trying to be removing, the api will return it.
 
 Response example for a request without errors:
 ```json
 {
-    "status": "OK",
-    "message": "Update 10 | Errors 0",
-    "errors": []
+    "data": [
+        {
+          "areaId": "ObjectId",
+          "users": [
+            "ObjectId",
+            "ObjectId",
+            "ObjectId",
+          ],
+          "usersNotUpdated": [],
+        },
+      ],
+      "errors": [],
+      "message": "Updated 3 | Not Updated 0 | Errors 0",
+      "status": "OK"
+}
+```
+
+Response example for a request without errors but with user not updated:
+```json
+{
+    "data": [
+        {
+          "areaId": "ObjectId",
+          "users": [
+            "ObjectId",
+            "ObjectId",
+            "ObjectId",
+          ],
+          "usersNotUpdated": [
+            "ObjectId",
+          ],
+        },
+      ],
+      "errors": [],
+      "message": "Updated 3 | Not Updated 1 | Errors 0",
+      "status": "OK"
 }
 ```
 
 Response example for a request **with errors**. In the example bellow the required field `users` is missing.
 ```json
 {
-    "status": "OK",
-    "message": "Updated 2 | Errors 1",
-    "errors": [
+      "data": [],
+      "errors": [
         {
-        "object": {
-            "areaID": "997f1f77bcf86cd799439011",
-            ...
+          "data": {
+            "areaId": "ObjectId",
+            "users": [],
+          },
+          "message": "Missing users",
         },
-        "message": "Missing users field"
-    }
+      ],
+      "message": "Updated 0 | Not Updated 0 | Errors 1",
+      "status": "ERROR",
 }
 ```
 
