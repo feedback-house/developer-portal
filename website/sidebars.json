@@ -6,20 +6,22 @@
   "docs-api": {
     "API Overview": ["api-getting-started", "api-list"],
     "API User": [
-      "api/user/api-user-update-or-create", 
       "api/user/api-user-get",
-      "api/user/api-user-get-id"
+      "api/user/api-user-get-id",
+      "api/user/api-user-update-or-create"
     ],
     "API Area": [
-      "api/area/api-area-update-or-create", 
       "api/area/api-area-get",
+      "api/area/api-area-update-or-create",
       "api/area/api-area-user-add",
       "api/area/api-area-user-remove"
     ],
     "API Business Division": [
-      "api/business-division/api-business-division-update-or-create", 
       "api/business-division/api-business-division-get",
+      "api/business-division/api-business-division-get-id",
+      "api/business-division/api-business-division-update-or-create",
       "api/business-division/api-business-division-user-add",
-      "api/business-division/api-business-division-user-remove"]
+      "api/business-division/api-business-division-user-remove"
+    ]
   }
 }

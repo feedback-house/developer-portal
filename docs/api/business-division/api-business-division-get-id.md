@@ -1,7 +1,7 @@
 ---
-id: api-business-division-get
-title: Business Division API | GET Data
-sidebar_label: Get Data
+id: api-business-division-get-id
+title: Business Division API | GET Business Division Data
+sidebar_label: Get Business Division Data
 ---
 
 ## API Summary
@@ -19,11 +19,10 @@ Given the size of your company you may need to paginate this API in other to ret
 
 ### Response 
 
-This API will return multiple `business divisions` in **an array of business divisions** (*in the format of an array of objects*). 
+This API will return a `business divisions` in **an object** (*in the format of json object*). 
 
 ```json
-businessDivisions: [
- { 
+businessDivision: { 
     "id": "507f1f77bcf86cd799439011", 
     "name": "Business Division 1", 
     "users": [
@@ -34,33 +33,16 @@ businessDivisions: [
     active: true,
     ...
  },
- { 
-    "id": "507f1f77bcf86cd799439022", 
-    "name": "Business Division 2", 
-    "responsibles":[
-         "507f1f77bcf86cd7994",
-         "232507f1f77bcf86cd"
-        ], 
-    ... 
-},
-{
-    "id": "507f1f77bcf86cd799439033", 
-    "name": "Business Division 3", 
-    "parent": "507f1f77bcf86cd799439011",
-    ...
-}
- ...
-]
 ```
 
-When no business divisions are found the array will be empty
+When no business division is found the object will be empty
 ```json
-business divisions: []
+businessDivision: {}
 ```
 
 ### Error reporting
 
-For each request the API will evaluate each business division individually and will report errors per business division. This means that this API can sucesslfully create or update some business divisions while rejecting others.
+For each request the API will evaluate the business division and will report errors per business division. This means that this API can sucesslfully create or update some business divisions while rejecting others.
 
 Example for a response with errors:
 ```json
@@ -70,14 +52,12 @@ Example for a response with errors:
 }
 ```
 
-## Response Fields for each business division
-
-The only required fields are `name` and one of the primary key fields; We strongly recommend that you use additional keys to control how business divisions are created, otherwise this can lead to duplicated business divisions.
+## Response Fields for business division
 
 #### `id` [Unique] 
 Unique ID for this Business Division. This field is a *primary key* and should be used whenever this business division needs to be updated.
 
-> This field can and should be used as **primary key** to detect if Business Division will be created or updated when using the Update or create API [business division Update or Create](./api-business division-update-or-create)
+> This field can and should be used as **primary key** to detect if Business Division will be created or updated when using the Update or create API [Business Division Update or Create](./api-business/division-update-or-create)
 
 #### `name` [String] 
 The business division name. This field is required. 
