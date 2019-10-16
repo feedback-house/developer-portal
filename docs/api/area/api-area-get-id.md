@@ -1,7 +1,7 @@
 ---
 id: api-area-get-id
-title: Area API | GET Area Data
-sidebar_label: Get Area Data
+title: Area API | GET Area
+sidebar_label: Get Area
 ---
 
 ## API Summary
@@ -13,7 +13,7 @@ sidebar_label: Get Area Data
 
 ## API details
 
-This endpoint allows querying and retrieving `area` data. 
+This endpoint allows querying and retrieving `area`. 
 
 Given the id of area, the api will query for it and return if found.
 
