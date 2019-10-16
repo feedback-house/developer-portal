@@ -1,7 +1,7 @@
 ---
 id: api-business-division-delete
-title: Business Division API | DELETE Business Division Data
-sidebar_label: Delete Business Division Data
+title: Business Division API | DELETE Business Division
+sidebar_label: Delete Business Division
 ---
 
 ## API Summary
@@ -13,7 +13,7 @@ sidebar_label: Delete Business Division Data
 
 ## API details
 
-This endpoint allows delete `business division` data.
+This endpoint allows delete `business division`.
 
 Given the id of business division, the api will delete it and return the id.
 

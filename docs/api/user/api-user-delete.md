@@ -1,7 +1,7 @@
 ---
 id: api-user-delete
-title: User API | DELETE User Data
-sidebar_label: Delete User Data
+title: User API | DELETE User
+sidebar_label: Delete User
 ---
 
 ## API Summary
@@ -13,7 +13,7 @@ sidebar_label: Delete User Data
 
 ## API details
 
-This endpoint allows delete `user` data.
+This endpoint allows delete `user`.
 
 Given the id of user, the api will delete it and return the id.
 

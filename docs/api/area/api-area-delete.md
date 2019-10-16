@@ -1,7 +1,7 @@
 ---
 id: api-area-delete
-title: Area API | DELETE Area Data
-sidebar_label: Delete Area Data
+title: Area API | DELETE Area
+sidebar_label: Delete Area
 ---
 
 ## API Summary
@@ -13,7 +13,7 @@ sidebar_label: Delete Area Data
 
 ## API details
 
-This endpoint allows delete `area` data.
+This endpoint allows delete `area`.
 
 Given the id of area, the api will delete it and return the id.
 
