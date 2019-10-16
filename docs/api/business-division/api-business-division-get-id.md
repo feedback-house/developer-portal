@@ -1,7 +1,7 @@
 ---
 id: api-business-division-get-id
-title: Business Division API | GET Business Division Data
-sidebar_label: Get Business Division Data
+title: Business Division API | GET Business Division
+sidebar_label: Get Business Division
 ---
 
 ## API Summary
@@ -26,7 +26,7 @@ businessDivision: {
     "id": "507f1f77bcf86cd799439011", 
     "name": "Business Division 1", 
     "users": [
-      "507f1f77bcf86cd7911",~~~~
+      "507f1f77bcf86cd7911",
       "507f1f77bcf86cd7912",
       "507f1f77bcf86cd7913",
     ], 

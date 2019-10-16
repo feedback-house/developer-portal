@@ -12,6 +12,7 @@
       "api/user/api-user-delete"
     ],
     "API Area": [
+      "api/area/api-area-get-id",
       "api/area/api-area-get",
       "api/area/api-area-update-or-create",
       "api/area/api-area-user-add",

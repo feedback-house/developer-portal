@@ -13,7 +13,7 @@ sidebar_label: Delete User
 
 ## API details
 
-This endpoint allows delete `User`.
+This endpoint allows delete `user`.
 
 Given the id of user, the api will delete it and return the id.
 
