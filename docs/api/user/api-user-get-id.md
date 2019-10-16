@@ -22,12 +22,19 @@ Given the id of user, the api will query for it and return if found.
 This API will return a object `user`. 
 
 ```json
-user: { "name": "User 1", "emails": ["user1@yourcompany.com"], ... },
+{
+    status: "OK",
+    user: { "name": "User 1", "emails": ["user1@yourcompany.com"], ... },
+}
 ```
 
 When no user is found the object will be empty
 ```json
-user: {}
+{
+    "status": "ERROR",
+    "message": "User not found",
+    "user": null,
+}
 ```
 
 ### Error reporting
@@ -36,7 +43,8 @@ Example for a response with errors:
 ```json
 {
     "status": "ERROR",
-    "message": "Invalid search query",
+    "message": "Invalid id",
+    "user": null
 }
 ```
 
