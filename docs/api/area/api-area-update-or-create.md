@@ -29,12 +29,14 @@ When calling this API must design your code to pass the latest, most updated are
 This endpoint supports `batch` operations and as such expects **an array of areas** (*in the format of an array of objects*). Each object must contain the Area details:
 
 ```json
-areas: [
- { "name": "Area 1", ... },
- { "name": "Area 2", "address": "56, 3rd Ave, New York, NY 10003", ... },
- { "name": "Area 3", "managers": ["507f1f77bcf86cd799439011"], "allowCandidatesApply": true, ... },
- ...
-]
+{
+    areas: [
+     { "name": "Area 1", ... },
+     { "name": "Area 2", "address": "56, 3rd Ave, New York, NY 10003", ... },
+     { "name": "Area 3", "managers": ["507f1f77bcf86cd799439011"], "allowCandidatesApply": true, ... },
+     ...
+    ]
+}
 ```
 
 If you need to create or update just one area you can call the API with just one area in the array object:

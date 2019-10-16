@@ -27,18 +27,22 @@ This endpoint supports `batch` operations and as such expects **an array of area
 Each object must contain the expected user or users to be included. This means that you can use this API to update multiple distinctive areas. This behavior is optional and not required.
 
 ```json
-areaUsersRemove: [
- { "areaId": "997f1f77bcf86cd799439011", "users": ["507f1f77bcf86cd799439011","507f1f77bcf86cd799439012"] },
- { "areaId": "997f1f77bcf86cd799439011", "users": ["507f1f77bcf86cd799439014","507f1f77bcf86cd799439016"] },
- { "areaId": "997f1f77bcf86cd799439012", "users": ["507f1f77bcf86cd799439011"] },
- ...
-]
+{
+    areaUsersRemove: [
+     { "areaId": "997f1f77bcf86cd799439011", "users": ["507f1f77bcf86cd799439011","507f1f77bcf86cd799439012"] },
+     { "areaId": "997f1f77bcf86cd799439011", "users": ["507f1f77bcf86cd799439014","507f1f77bcf86cd799439016"] },
+     { "areaId": "997f1f77bcf86cd799439012", "users": ["507f1f77bcf86cd799439011"] },
+     ...
+    ]
+}
 ```
 
 If you need to remove just one user you can call the API with just one area in the array object:
 
 ```json
-areaUsersRemove: [ { "areaId": "997f1f77bcf86cd799439011", "users": ["507f1f77bcf86cd799439011"] },]
+{
+ areaUsersRemove: [ { "areaId": "997f1f77bcf86cd799439011", "users": ["507f1f77bcf86cd799439011"] },]
+}
 ```
 
 ### Response and Error reporting

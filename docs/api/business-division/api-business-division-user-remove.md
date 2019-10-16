@@ -25,12 +25,14 @@ This endpoint supports `batch` operations and as such expects **an array of busi
 Each object must contain the expected user or users to be included. This means that you can use this API to update multiple distinctive business divisions. This behavior is optional and not required. If some user dont belongs that the business division is trying to be removing, the api will return it.
 
 ```json
-businessDivisionUsersRemove: [
- { "businessDivisionId": "997f1f77bcf86cd799439011", "users": ["507f1f77bcf86cd799439011","507f1f77bcf86cd799439012"] },
- { "businessDivisionId": "997f1f77bcf86cd799439011", "users": ["507f1f77bcf86cd799439014","507f1f77bcf86cd799439016"] },
- { "businessDivisionId": "997f1f77bcf86cd799439012", "users": ["507f1f77bcf86cd799439011"] },
- ...
-]
+{
+    businessDivisionUsersRemove: [
+     { "businessDivisionId": "997f1f77bcf86cd799439011", "users": ["507f1f77bcf86cd799439011","507f1f77bcf86cd799439012"] },
+     { "businessDivisionId": "997f1f77bcf86cd799439011", "users": ["507f1f77bcf86cd799439014","507f1f77bcf86cd799439016"] },
+     { "businessDivisionId": "997f1f77bcf86cd799439012", "users": ["507f1f77bcf86cd799439011"] },
+     ...
+    ]
+}
 ```
 
 If you need to remove just one user you can call the API with just one business division in the array object:
