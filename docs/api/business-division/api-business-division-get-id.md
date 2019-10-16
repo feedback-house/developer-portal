@@ -6,7 +6,7 @@ sidebar_label: Get Business Division
 
 ## API Summary
 
-| Endpoint | **https://api.feedback.house/api/planning/business-division/v1/query** |
+| Endpoint | **https://api.feedback.house/api/planning/business-division/v1/query/:id** |
 |----------|---------------------------------------------------|
 | Method   | **GET** |
 | Format   | **JSON** |
@@ -22,22 +22,27 @@ Given the size of your company you may need to paginate this API in other to ret
 This API will return a `business divisions` in **an object** (*in the format of json object*). 
 
 ```json
-businessDivision: { 
-    "id": "507f1f77bcf86cd799439011", 
-    "name": "Business Division 1", 
-    "users": [
-      "507f1f77bcf86cd7911",
-      "507f1f77bcf86cd7912",
-      "507f1f77bcf86cd7913",
-    ], 
-    active: true,
-    ...
- },
+{
+    "status": "OK",
+    businessDivision: { 
+        "id": "507f1f77bcf86cd799439011", 
+        "name": "Business Division 1", 
+        "users": [
+          "507f1f77bcf86cd7911",
+          "507f1f77bcf86cd7912",
+          "507f1f77bcf86cd7913",
+        ], 
+        active: true,
+        ...
+     },
+}
 ```
 
 When no business division is found the object will be empty
 ```json
-businessDivision: {}
+{
+  businessDivision: {}
+}
 ```
 
 ### Error reporting

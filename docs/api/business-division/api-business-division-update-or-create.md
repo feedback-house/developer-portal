@@ -25,18 +25,22 @@ When calling this API must design your code to pass the latest, most recent area
 This endpoint supports `batch` operations and as such expects **an array of areas** (*in the format of an array of objects*). Each object must contain the Business Division details:
 
 ```json
-businessDivisions: [
- { "name": "Business Division 1", ... },
- { "name": "Business Division 2", "address": "56, 3rd Ave, New York, NY 10003", ... },
- { "name": "Business Division 3", "responsibles": ["507f1f77bcf86cd799439011"], "allowCandidatesApply": true, ... },
- ...
-]
+{
+    businessDivisions: [
+     { "name": "Business Division 1", ... },
+     { "name": "Business Division 2", "address": "56, 3rd Ave, New York, NY 10003", ... },
+     { "name": "Business Division 3", "responsibles": ["507f1f77bcf86cd799439011"], "allowCandidatesApply": true, ... },
+     ...
+    ]
+}
 ```
 
 If you need to create or update just one area you can call the API with just one area in the array object:
 
 ```json
-businessDivisions: [ { "name": "business division 1", "active": true, ... },]
+{
+  businessDivisions: [ { "name": "business division 1", "active": true, ... },]
+}
 ```
 
 

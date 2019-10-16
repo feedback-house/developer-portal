@@ -22,7 +22,9 @@ Given the id of area, the api will query for it and return if found.
 This API will return a object `area`. 
 
 ```json
-area: { "name": "Area 1", "emails": ["area1@yourcompany.com"], ... },
+{
+  area: { "name": "Area 1", "emails": ["area1@yourcompany.com"], ... },
+}
 ```
 
 When no area is found the object will be empty
