@@ -59,4 +59,4 @@ Example for a response with errors:
 
 #### `id` [Unique]
 
-Unique ID for this user. If user succeeded deleted, the api will return he/she id.
+Unique ID for this User. If user succeeded deleted, the api will return the User id.
