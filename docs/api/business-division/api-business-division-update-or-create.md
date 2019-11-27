@@ -29,7 +29,7 @@ This endpoint supports `batch` operations and as such expects **an array of busi
     businessDivisions: [
      { "name": "Business Division 1", ... },
      { "name": "Business Division 2", "address": "56, 3rd Ave, New York, NY 10003", ... },
-     { "name": "Business Division 3", "responsibles": ["507f1f77bcf86cd799439011"], "allowCandidatesApply": true, ... },
+     { "name": "Business Division 3", "managers": ["507f1f77bcf86cd799439011"], "allowCandidatesApply": true, ... },
      ...
     ]
 }
