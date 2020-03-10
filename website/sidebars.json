@@ -1,7 +1,10 @@
 {
   "docs": {
     "Getting Started": ["getting-started"],
-    "Single Sign On": ["single-sign-on-getting-started"]
+    "Single Sign On": [
+      "single-sign-on-getting-started",
+      "single-sign-on-gmail"
+    ]
   },
   "docs-api": {
     "API Overview": ["api-getting-started", "api-list"],
