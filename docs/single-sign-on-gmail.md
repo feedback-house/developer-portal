@@ -26,7 +26,7 @@ https://admin.google.com/AdminHome?hl=en#AppsList:serviceType=SAML_APPS
 
 ![saml-step2](/img/google-saml-step2-idp.png)
 
-- Download IDP metadata, option 2
+- Download IDP metadata, option 2 (it will be the xml used inside Feedback House)
 
 ![saml-step](/img/google-saml-step3-custom-app.png)
 
@@ -53,3 +53,8 @@ Name ID Format EMAIL
 # Enable SAML to everybody
 
 ![saml-on-everyone](/img/google-saml-on-everyone.png)
+
+# Add IDP xml metadata to your Feedback House organization
+
+https://yourcompany.feedback.house/home/company/settings/data
+![saml-feedbackhouse](/img/login-saml-feedback.png)
