@@ -34,7 +34,7 @@ If your company uses SAML be able to automatically log into Feedback House SAML 
 
 In order to properly operate your company users need to be able to access Feedback House servers. Feedback House uses standard web technologies and enforces encryption in all communications, in most cases your setup should work out of the box with not additional requirements. 
 
-If you encounter issues using the platform please check the folling requirements.
+If you encounter issues using the platform please check the following requirements.
 
 - Ensure you have white list Feedback House domains in your proxy server, or internal firewall. Your users should be able to access all domains and subdomains.
   

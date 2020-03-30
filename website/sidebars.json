@@ -4,6 +4,9 @@
     "Single Sign On": [
       "single-sign-on-getting-started",
       "single-sign-on-gmail"
+    ],
+    "Security": [
+      "security/security-guidelines"
     ]
   },
   "docs-api": {
