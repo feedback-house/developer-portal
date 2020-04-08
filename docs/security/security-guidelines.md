@@ -245,6 +245,7 @@ Backup security guidelines
 | Unique access keys | IAM Access keys required to upload and retrieve backup data must be performed different, and separated access roles |
 | Cluster isolation | Backups from production environments must be stored in separated buckets |
 | Deletion | Backup data must be automatically, permanently deleted after 30 days |
+| No physical medium | Backups are only stored in digital archives, no physical medium such as tapes, disks, external hard drives should be used |
 
 
 
