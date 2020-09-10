@@ -5,8 +5,9 @@
       "single-sign-on-getting-started",
       "single-sign-on-gmail"
     ],
-    "Security": [
-      "security/security-guidelines"
+    "Policies": [
+      "security/security-guidelines",
+      "security/backup-policy"
     ]
   },
   "docs-api": {

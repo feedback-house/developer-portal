@@ -21,11 +21,6 @@ sidebar_label: Security Guidelines
 | January 2018 | First Version | JCB | Rafael Turk, Sibelius Seraphini |
 
 
-## About Feedback House
-
-Feedback House is the one stop shop app for teams
-
-
 ## Security Guidelines
 
 **WE BELIEVE THAT SECURITY IS NON NEGOTIABLE AND MUST BE PRESENT, TESTED AND ENFORCED IN ALL ASPECTS AND STAGES OF THE PRODUCT.** 
@@ -233,7 +228,7 @@ Data must be encrypted at all times. Data must be encrypted while in flight or w
 
 ### Backup Policy
  
-Backups must run automatically every 30 minutes
+Backups will run automatically according with the [backup policy](backup-policy)
 
 ### Backup Security
 
