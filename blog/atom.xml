@@ -16,7 +16,6 @@
         <summary type="html"><![CDATA[<p>This blog post will test file name parsing issues when periods are present.</p> ]]></summary>
         <author>
             <name>Eric Nakagawa</name>
-            <email/>
             <uri>http://twitter.com/ericnakagawa</uri>
         </author>
     </entry>
