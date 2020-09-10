@@ -18,13 +18,13 @@ sidebar_label: Backup Policy
 
 ## Backup Guidelines
 
-**Data must be protected, stored in a secure environment and backed up in regular and automated processes.** 
+**Data must be protected, stored in a secure environment and backed up regularly.** 
 
 ## Backup Policy & Security
 
 ### Backup Policy
  
-- Backups will run automatically every hour
+- Backups will run automatically every 2 hours
 - Backups will be archived (cold storage) after 24 hours
 - Backups will be permanently excluded (hard delete) after 30 days
 
