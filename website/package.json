@@ -1,6 +1,7 @@
 {
   "scripts": {
     "start": "docusaurus start",
+    "serve": "docusaurus serve",
     "build": "docusaurus build",
     "write-translations": "docusaurus write-translations",
     "version": "docusaurus-version",

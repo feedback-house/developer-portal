@@ -2,7 +2,7 @@ module.exports={
   "title": "Feedback House for Developers",
   "tagline": "One stop shop for teams",
   "url": "https://developers.feedback.house",
-  "baseUrl": "/",
+  "baseUrl": "/developer-portal/",
   "organizationName": "feedback-house",
   "projectName": "developer-portal",
   "scripts": [
@@ -25,18 +25,15 @@ module.exports={
     [
       "@docusaurus/preset-classic",
       {
-        "docs": {
-          "showLastUpdateAuthor": false,
-          "showLastUpdateTime": false,
-          "path": "./docs",
-          "sidebarPath": "./sidebars.json"
-        },
         // "blog": {
         //   "path": "blog"
         // },
-        // "theme": {
-        //   "customCss": "./customTheme.css"
-        // }
+        docs: {
+          sidebarPath: require.resolve('./sidebars.json'),
+        },
+        theme: {
+          customCss: require.resolve('./src/css/customTheme.css'),
+        },
       }
     ]
   ],
