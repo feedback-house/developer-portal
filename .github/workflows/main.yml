@@ -17,7 +17,6 @@ jobs:
 
     - name: yarn install
       run: cd website && yarn install
-
     - name: yarn build
       run: cd website && yarn build
 
