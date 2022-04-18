@@ -17,16 +17,16 @@ jobs:
 
     - name: yarn install
       run: cd website && yarn install
-
     - name: yarn build
       run: cd website && yarn build
 
-    - name: Deploying to GitHub Pages
-      command: |
-        git config --global user.email "<GITHUB_USERNAME>@users.noreply.github.com"
-        git config --global user.name "<YOUR_NAME>"
-        echo "machine github.com login <GITHUB_USERNAME> password $GITHUB_TOKEN" > ~/.netrc
-        cd website && GIT_USER=<GIT_USER> yarn publish-gh-pages
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        # Build output to publish to the `gh-pages` branch:
+        publish_dir: ./website/build
+
 
 # workflow "Build Docs" {
 #   on = "push"
