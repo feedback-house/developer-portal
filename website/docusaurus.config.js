@@ -2,7 +2,7 @@ module.exports={
   "title": "Feedback House for Developers",
   "tagline": "One stop shop for teams",
   "url": "https://developers.feedback.house",
-  "baseUrl": "/developer-portal/",
+  "baseUrl": "/",
   "organizationName": "feedback-house",
   "projectName": "developer-portal",
   "scripts": [
