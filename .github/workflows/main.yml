@@ -15,18 +15,18 @@ jobs:
       with:
         version: 10.x
 
-    - name: npm install
-      run: cd website && npm install
+    - name: yarn install
+      run: cd website && yarn install
 
-    - name: npm build
-      run: cd website && npm build
+    - name: yarn build
+      run: cd website && yarn build
 
     - name: Deploying to GitHub Pages
       command: |
         git config --global user.email "<GITHUB_USERNAME>@users.noreply.github.com"
         git config --global user.name "<YOUR_NAME>"
         echo "machine github.com login <GITHUB_USERNAME> password $GITHUB_TOKEN" > ~/.netrc
-        cd website && GIT_USER=<GIT_USER> npm publish-gh-pages
+        cd website && GIT_USER=<GIT_USER> yarn publish-gh-pages
 
 # workflow "Build Docs" {
 #   on = "push"
@@ -40,7 +40,7 @@ jobs:
 
 # action "Install" {
 #   needs = ["Filter branch"]
-#   uses = "actions/npm@master"
+#   uses = "actions/yarn@master"
 #   args = "install --prefix ./website"
 # }
 
