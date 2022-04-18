@@ -33,6 +33,9 @@
       "api/business-division/api-business-division-user-add",
       "api/business-division/api-business-division-user-remove",
       "api/business-division/api-business-division-delete"
+    ],
+    "API Feedback": [
+      "api/feedback/api-feedback-get"
     ]
   }
 }
